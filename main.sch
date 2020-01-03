@@ -14,22 +14,18 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 Wire Wire Line
-	4850 1200 4850 1150
-Wire Wire Line
-	4800 1150 4850 1150
-Wire Wire Line
 	4150 1500 4400 1500
 $Comp
 L power:Earth #PWR?
 U 1 1 5DE9FD36
-P 4500 1600
+P 4400 1600
 AR Path="/5DC79FAF/5DE9FD36" Ref="#PWR?"  Part="1" 
 AR Path="/5DE9FD36" Ref="#PWR013"  Part="1" 
-F 0 "#PWR013" H 4500 1350 50  0001 C CNN
-F 1 "Earth" H 4500 1450 50  0001 C CNN
-F 2 "" H 4500 1600 50  0001 C CNN
-F 3 "~" H 4500 1600 50  0001 C CNN
-	1    4500 1600
+F 0 "#PWR013" H 4400 1350 50  0001 C CNN
+F 1 "Earth" H 4400 1450 50  0001 C CNN
+F 2 "" H 4400 1600 50  0001 C CNN
+F 3 "~" H 4400 1600 50  0001 C CNN
+	1    4400 1600
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -177,20 +173,16 @@ PC2
 $Comp
 L power:Earth #PWR021
 U 1 1 5E17673E
-P 8400 900
-F 0 "#PWR021" H 8400 650 50  0001 C CNN
-F 1 "Earth" H 8400 750 50  0001 C CNN
-F 2 "" H 8400 900 50  0001 C CNN
-F 3 "~" H 8400 900 50  0001 C CNN
-	1    8400 900 
+P 8900 900
+F 0 "#PWR021" H 8900 650 50  0001 C CNN
+F 1 "Earth" H 8900 750 50  0001 C CNN
+F 2 "" H 8900 900 50  0001 C CNN
+F 3 "~" H 8900 900 50  0001 C CNN
+	1    8900 900 
 	1    0    0    -1  
 $EndComp
 Text Label 8200 1500 0    50   ~ 0
 ~RESET
-Wire Notes Line
-	7700 2200 8500 2200
-Wire Notes Line
-	7700 550  8500 550 
 Text Label 8200 1600 0    50   ~ 0
 VDEBUG
 Text Label 3450 1800 0    50   ~ 0
@@ -889,7 +881,7 @@ AR Path="/5DC79FAF/5DE9FD58" Ref="Y?"  Part="1"
 AR Path="/5DE9FD58" Ref="Y1"  Part="1" 
 F 0 "Y1" H 1950 4900 50  0000 C CNN
 F 1 "Crystal-16MHz" H 2200 4800 50  0000 C CNN
-F 2 "tm4c:Crystal_SMD_5032-2Pin_5.0x3.2mm_HandSoldering" H 2200 5400 50  0001 C CNN
+F 2 "tm4c:Crystal_SMD_HC49-SD" H 2200 5400 50  0001 C CNN
 F 3 "1" H 2200 5400 50  0001 C CNN
 F 4 "1" H 2200 5400 50  0001 C CNN "Web"
 F 5 "1" H 2200 5400 50  0001 C CNN "Desctription"
@@ -1166,12 +1158,6 @@ $EndComp
 Wire Wire Line
 	8050 1500 8200 1500
 Wire Wire Line
-	8050 900  8200 900 
-Wire Wire Line
-	8050 1000 8200 1000
-Wire Wire Line
-	8050 1100 8200 1100
-Wire Wire Line
 	8050 1200 8200 1200
 Text Label 8200 1300 0    50   ~ 0
 PA1
@@ -1232,56 +1218,6 @@ Wire Wire Line
 Wire Wire Line
 	9590 2580 9840 2580
 $Comp
-L Connector:Conn_01x10_Male J7
-U 1 1 5EBA1FC9
-P 10240 2480
-F 0 "J7" H 10348 3061 50  0000 C CNN
-F 1 "B Port" H 10348 2970 50  0000 C CNN
-F 2 "tm4c:PinHeader_1x10_P2.54mm_Vertical" H 10240 2480 50  0001 C CNN
-F 3 "1" H 10240 2480 50  0001 C CNN
-F 4 "1" H 10240 2480 50  0001 C CNN "Web"
-F 5 "1" H 10240 2480 50  0001 C CNN "Desctription"
-F 6 "1" H 10240 2480 50  0001 C CNN "Digi-Key Part Number"
-F 7 "1" H 10240 2480 50  0001 C CNN "Giá đơn vị"
-F 8 "1" H 10240 2480 50  0001 C CNN "Mfr. #"
-F 9 "1" H 10240 2480 50  0001 C CNN "Mouser #"
-F 10 "1" H 10240 2480 50  0001 C CNN "Mã hàng"
-	1    10240 2480
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	10440 2080 10690 2080
-Wire Wire Line
-	10440 2180 10690 2180
-Wire Wire Line
-	10440 2280 10690 2280
-Wire Wire Line
-	10440 2380 10690 2380
-Wire Wire Line
-	10440 2480 10690 2480
-Wire Wire Line
-	10440 2680 10690 2680
-Wire Wire Line
-	10440 2780 10690 2780
-Wire Wire Line
-	10440 2580 10690 2580
-Text Label 10690 2780 0    50   ~ 0
-PB7
-Text Label 10690 2680 0    50   ~ 0
-PB6
-Text Label 10690 2580 0    50   ~ 0
-PB5
-Text Label 10690 2480 0    50   ~ 0
-PB4
-Text Label 10690 2380 0    50   ~ 0
-PB3
-Text Label 10690 2280 0    50   ~ 0
-PB2
-Text Label 10690 2180 0    50   ~ 0
-PB1
-Text Label 10690 2080 0    50   ~ 0
-PB0
-$Comp
 L Connector:Conn_01x10_Male J3
 U 1 1 5EBECAC9
 P 9390 1180
@@ -1297,24 +1233,6 @@ F 8 "1" H 9390 1180 50  0001 C CNN "Mfr. #"
 F 9 "1" H 9390 1180 50  0001 C CNN "Mouser #"
 F 10 "1" H 9390 1180 50  0001 C CNN "Mã hàng"
 	1    9390 1180
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:Conn_01x10_Male J6
-U 1 1 5EBED8DF
-P 10240 1180
-F 0 "J6" H 10348 1761 50  0000 C CNN
-F 1 "D Port" H 10348 1670 50  0000 C CNN
-F 2 "tm4c:PinHeader_1x10_P2.54mm_Vertical" H 10240 1180 50  0001 C CNN
-F 3 "1" H 10240 1180 50  0001 C CNN
-F 4 "1" H 10240 1180 50  0001 C CNN "Web"
-F 5 "1" H 10240 1180 50  0001 C CNN "Desctription"
-F 6 "1" H 10240 1180 50  0001 C CNN "Digi-Key Part Number"
-F 7 "1" H 10240 1180 50  0001 C CNN "Giá đơn vị"
-F 8 "1" H 10240 1180 50  0001 C CNN "Mfr. #"
-F 9 "1" H 10240 1180 50  0001 C CNN "Mouser #"
-F 10 "1" H 10240 1180 50  0001 C CNN "Mã hàng"
-	1    10240 1180
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -1349,38 +1267,6 @@ Text Label 9840 1380 0    50   ~ 0
 PC1
 Text Label 9840 1480 0    50   ~ 0
 PC0
-Wire Wire Line
-	10440 1480 10690 1480
-Wire Wire Line
-	10440 1380 10690 1380
-Wire Wire Line
-	10440 1280 10690 1280
-Wire Wire Line
-	10440 1180 10690 1180
-Wire Wire Line
-	10690 1080 10440 1080
-Wire Wire Line
-	10440 980  10690 980 
-Wire Wire Line
-	10690 880  10440 880 
-Wire Wire Line
-	10440 780  10690 780 
-Text Label 10690 1480 0    50   ~ 0
-PD7
-Text Label 10690 1380 0    50   ~ 0
-PD6
-Text Label 10690 1280 0    50   ~ 0
-PD5
-Text Label 10690 1180 0    50   ~ 0
-PD4
-Text Label 10690 1080 0    50   ~ 0
-PD3
-Text Label 10690 980  0    50   ~ 0
-PD2
-Text Label 10690 880  0    50   ~ 0
-PD1
-Text Label 10690 780  0    50   ~ 0
-PD0
 Wire Wire Line
 	4150 1200 4150 1150
 Connection ~ 4150 1150
@@ -1430,15 +1316,6 @@ F 3 "" H 2650 850 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	10690 2980 10440 2980
-Wire Wire Line
-	10440 2880 10690 2880
-Wire Wire Line
-	10690 2880 10690 2980
-Wire Wire Line
-	10690 2980 10690 3030
-Connection ~ 10690 2980
-Wire Wire Line
 	9840 2980 9590 2980
 Wire Wire Line
 	9590 2880 9840 2880
@@ -1447,26 +1324,6 @@ Wire Wire Line
 Wire Wire Line
 	9840 2980 9840 3030
 Connection ~ 9840 2980
-Wire Wire Line
-	10690 1680 10440 1680
-Wire Wire Line
-	10440 1580 10690 1580
-Wire Wire Line
-	10690 1580 10690 1680
-$Comp
-L power:Earth #PWR029
-U 1 1 5F046C36
-P 10690 1730
-F 0 "#PWR029" H 10690 1480 50  0001 C CNN
-F 1 "Earth" H 10690 1580 50  0001 C CNN
-F 2 "" H 10690 1730 50  0001 C CNN
-F 3 "~" H 10690 1730 50  0001 C CNN
-	1    10690 1730
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	10690 1680 10690 1730
-Connection ~ 10690 1680
 Wire Wire Line
 	3800 1150 4050 1150
 Wire Wire Line
@@ -1493,19 +1350,19 @@ $EndComp
 $Comp
 L Device:C C9
 U 1 1 5E532E87
-P 4850 1350
-F 0 "C9" H 4965 1396 50  0000 L CNN
-F 1 "22uF" H 4965 1305 50  0000 L CNN
-F 2 "tm4c:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 4888 1200 50  0001 C CNN
-F 3 "1" H 4850 1350 50  0001 C CNN
-F 4 "1" H 4850 1350 50  0001 C CNN "Web"
-F 5 "1" H 4850 1350 50  0001 C CNN "Desctription"
-F 6 "1" H 4850 1350 50  0001 C CNN "Digi-Key Part Number"
-F 7 "1" H 4850 1350 50  0001 C CNN "Giá đơn vị"
-F 8 "1" H 4850 1350 50  0001 C CNN "Mfr. #"
-F 9 "1" H 4850 1350 50  0001 C CNN "Mouser #"
-F 10 "1" H 4850 1350 50  0001 C CNN "Mã hàng"
-	1    4850 1350
+P 4950 1350
+F 0 "C9" H 5065 1396 50  0000 L CNN
+F 1 "22uF" H 5065 1305 50  0000 L CNN
+F 2 "tm4c:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 4988 1200 50  0001 C CNN
+F 3 "1" H 4950 1350 50  0001 C CNN
+F 4 "1" H 4950 1350 50  0001 C CNN "Web"
+F 5 "1" H 4950 1350 50  0001 C CNN "Desctription"
+F 6 "1" H 4950 1350 50  0001 C CNN "Digi-Key Part Number"
+F 7 "1" H 4950 1350 50  0001 C CNN "Giá đơn vị"
+F 8 "1" H 4950 1350 50  0001 C CNN "Mfr. #"
+F 9 "1" H 4950 1350 50  0001 C CNN "Mouser #"
+F 10 "1" H 4950 1350 50  0001 C CNN "Mã hàng"
+	1    4950 1350
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1603,9 +1460,6 @@ F 3 "" H 9400 5350 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4850 1150 5500 1150
-Connection ~ 4850 1150
-Wire Wire Line
 	5500 950  5500 1150
 NoConn ~ 3050 5800
 $Comp
@@ -1681,10 +1535,6 @@ F 10 "1" H 8000 5600 50  0001 C CNN "Web"
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	8050 800  8400 800 
-Wire Wire Line
-	8400 800  8400 900 
-Wire Wire Line
 	8200 1600 8050 1600
 $Comp
 L power:Earth #PWR024
@@ -1695,17 +1545,6 @@ F 1 "Earth" H 9840 2880 50  0001 C CNN
 F 2 "" H 9840 3030 50  0001 C CNN
 F 3 "~" H 9840 3030 50  0001 C CNN
 	1    9840 3030
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:Earth #PWR030
-U 1 1 5EFE36E3
-P 10690 3030
-F 0 "#PWR030" H 10690 2780 50  0001 C CNN
-F 1 "Earth" H 10690 2880 50  0001 C CNN
-F 2 "" H 10690 3030 50  0001 C CNN
-F 3 "~" H 10690 3030 50  0001 C CNN
-	1    10690 3030
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -1816,9 +1655,6 @@ Text Notes 10150 6100 0    98   ~ 20
 Power Flags
 Text Notes 7500 6100 0    98   ~ 20
 Mounting Holes
-Connection ~ 10690 4130
-Wire Wire Line
-	10690 4030 10690 4130
 Connection ~ 9840 4430
 Wire Wire Line
 	10090 4430 10090 4380
@@ -1861,38 +1697,6 @@ F 3 "" H 9840 3530 50  0001 C CNN
 	1    9840 3530
 	1    0    0    -1  
 $EndComp
-Connection ~ 10690 4430
-Wire Wire Line
-	10690 4430 10690 4480
-Wire Wire Line
-	10440 4030 10690 4030
-$Comp
-L power:Earth #PWR031
-U 1 1 5ED92B4B
-P 10690 4480
-F 0 "#PWR031" H 10690 4230 50  0001 C CNN
-F 1 "Earth" H 10690 4330 50  0001 C CNN
-F 2 "" H 10690 4480 50  0001 C CNN
-F 3 "~" H 10690 4480 50  0001 C CNN
-	1    10690 4480
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	10690 4230 10690 4330
-Connection ~ 10690 4230
-Wire Wire Line
-	10440 4230 10690 4230
-Wire Wire Line
-	10690 4330 10690 4430
-Connection ~ 10690 4330
-Wire Wire Line
-	10440 4330 10690 4330
-Wire Wire Line
-	10690 4430 10440 4430
-Wire Wire Line
-	10690 4130 10690 4230
-Wire Wire Line
-	10440 4130 10690 4130
 $Comp
 L Connector:Conn_01x10_Male J5
 U 1 1 5ED35928
@@ -1921,28 +1725,8 @@ Wire Wire Line
 	9590 4030 9840 4030
 Wire Wire Line
 	9590 3930 9840 3930
-Text Label 10690 3530 0    50   ~ 0
-PF0
-Text Label 10690 3630 0    50   ~ 0
-PF1
-Text Label 10690 3730 0    50   ~ 0
-PF2
-Text Label 10690 3830 0    50   ~ 0
-PF3
-Text Label 10690 3930 0    50   ~ 0
-PF4
 Wire Wire Line
 	9590 3830 9840 3830
-Wire Wire Line
-	10440 3930 10690 3930
-Wire Wire Line
-	10440 3830 10690 3830
-Wire Wire Line
-	10440 3730 10690 3730
-Wire Wire Line
-	10440 3630 10690 3630
-Wire Wire Line
-	10440 3530 10690 3530
 Text Label 9840 4330 0    50   ~ 0
 PE5
 Text Label 9840 4230 0    50   ~ 0
@@ -1955,30 +1739,8 @@ Text Label 9840 4030 0    50   ~ 0
 PE2
 Text Label 9840 4130 0    50   ~ 0
 PE3
-$Comp
-L Connector:Conn_01x10_Male J8
-U 1 1 5EC3FE2E
-P 10240 3930
-F 0 "J8" H 10348 4511 50  0000 C CNN
-F 1 "F Port" H 10348 4420 50  0000 C CNN
-F 2 "tm4c:PinHeader_1x10_P2.54mm_Vertical" H 10240 3930 50  0001 C CNN
-F 3 "1" H 10240 3930 50  0001 C CNN
-F 4 "1" H 10240 3930 50  0001 C CNN "Web"
-F 5 "1" H 10240 3930 50  0001 C CNN "Desctription"
-F 6 "1" H 10240 3930 50  0001 C CNN "Digi-Key Part Number"
-F 7 "1" H 10240 3930 50  0001 C CNN "Giá đơn vị"
-F 8 "1" H 10240 3930 50  0001 C CNN "Mfr. #"
-F 9 "1" H 10240 3930 50  0001 C CNN "Mouser #"
-F 10 "1" H 10240 3930 50  0001 C CNN "Mã hàng"
-	1    10240 3930
-	1    0    0    -1  
-$EndComp
 Wire Notes Line
-	9100 4850 11100 4850
-Wire Notes Line
-	9100 550  11100 550 
-Wire Notes Line
-	11100 550  11100 4850
+	11200 550  11200 4850
 Wire Notes Line
 	9100 550  9100 4850
 Text Notes 10250 4800 0    98   ~ 20
@@ -1997,10 +1759,10 @@ Wire Notes Line
 Text Notes 6900 2150 0    98   ~ 20
 Switch
 Wire Notes Line
-	8500 550  8500 2200
+	9050 550  9050 2200
 Wire Notes Line
 	7700 550  7700 2200
-Text Notes 7750 2150 0    98   ~ 20
+Text Notes 8250 2150 0    98   ~ 20
 JTAG Port
 Wire Wire Line
 	2700 2650 3150 2650
@@ -2061,8 +1823,6 @@ F 10 "1" H 4100 2000 50  0001 C CNN "Mã hàng"
 	0    1    1    0   
 $EndComp
 Wire Notes Line
-	7000 3750 7000 4900
-Wire Notes Line
 	7000 4900 8700 4900
 Wire Notes Line
 	8700 3300 7000 3300
@@ -2070,8 +1830,6 @@ Text Notes 8300 4850 0    98   ~ 20
 RGB
 Wire Notes Line
 	8700 3300 8700 4900
-Wire Notes Line
-	7000 3700 7000 3300
 $Comp
 L Device:LED D?
 U 1 1 5E4DE969
@@ -2294,18 +2052,6 @@ Wire Wire Line
 	4400 1450 4400 1500
 Connection ~ 4400 1500
 Wire Wire Line
-	4600 1450 4600 1500
-Connection ~ 4600 1500
-Wire Wire Line
-	4600 1500 4850 1500
-Wire Wire Line
-	4400 1500 4500 1500
-Wire Wire Line
-	4500 1600 4500 1500
-Connection ~ 4500 1500
-Wire Wire Line
-	4500 1500 4600 1500
-Wire Wire Line
 	3800 2000 3950 2000
 Connection ~ 3800 2000
 Wire Wire Line
@@ -2320,4 +2066,344 @@ Wire Wire Line
 Wire Wire Line
 	5100 3150 5650 3150
 Connection ~ 5650 3150
+Text Notes 8050 900  0    50   ~ 0
+TCK
+Text Notes 8050 1000 0    50   ~ 0
+TMS
+Text Notes 8050 1100 0    50   ~ 0
+TDO
+Text Notes 8050 1200 0    50   ~ 0
+TDI
+Wire Notes Line
+	9100 4850 11200 4850
+Wire Notes Line
+	9100 550  11200 550 
+$Comp
+L Connector:Conn_01x10_Male J7
+U 1 1 5EBA1FC9
+P 10240 2480
+F 0 "J7" H 10348 3061 50  0000 C CNN
+F 1 "B Port" H 10348 2970 50  0000 C CNN
+F 2 "tm4c:PinHeader_1x10_P2.54mm_Vertical" H 10240 2480 50  0001 C CNN
+F 3 "1" H 10240 2480 50  0001 C CNN
+F 4 "1" H 10240 2480 50  0001 C CNN "Web"
+F 5 "1" H 10240 2480 50  0001 C CNN "Desctription"
+F 6 "1" H 10240 2480 50  0001 C CNN "Digi-Key Part Number"
+F 7 "1" H 10240 2480 50  0001 C CNN "Giá đơn vị"
+F 8 "1" H 10240 2480 50  0001 C CNN "Mfr. #"
+F 9 "1" H 10240 2480 50  0001 C CNN "Mouser #"
+F 10 "1" H 10240 2480 50  0001 C CNN "Mã hàng"
+	1    10240 2480
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10440 2080 10690 2080
+Wire Wire Line
+	10440 2180 10690 2180
+Wire Wire Line
+	10440 2280 10690 2280
+Wire Wire Line
+	10440 2380 10690 2380
+Wire Wire Line
+	10440 2480 10690 2480
+Wire Wire Line
+	10440 2680 10690 2680
+Wire Wire Line
+	10440 2780 10690 2780
+Wire Wire Line
+	10440 2580 10690 2580
+Text Label 10690 2780 0    50   ~ 0
+PB7
+Text Label 10690 2680 0    50   ~ 0
+PB6
+Text Label 10690 2580 0    50   ~ 0
+PB5
+Text Label 10690 2480 0    50   ~ 0
+PB4
+Text Label 10690 2380 0    50   ~ 0
+PB3
+Text Label 10690 2280 0    50   ~ 0
+PB2
+Text Label 10690 2180 0    50   ~ 0
+PB1
+Text Label 10690 2080 0    50   ~ 0
+PB0
+$Comp
+L Connector:Conn_01x10_Male J6
+U 1 1 5EBED8DF
+P 10240 1180
+F 0 "J6" H 10348 1761 50  0000 C CNN
+F 1 "D Port" H 10348 1670 50  0000 C CNN
+F 2 "tm4c:PinHeader_1x10_P2.54mm_Vertical" H 10240 1180 50  0001 C CNN
+F 3 "1" H 10240 1180 50  0001 C CNN
+F 4 "1" H 10240 1180 50  0001 C CNN "Web"
+F 5 "1" H 10240 1180 50  0001 C CNN "Desctription"
+F 6 "1" H 10240 1180 50  0001 C CNN "Digi-Key Part Number"
+F 7 "1" H 10240 1180 50  0001 C CNN "Giá đơn vị"
+F 8 "1" H 10240 1180 50  0001 C CNN "Mfr. #"
+F 9 "1" H 10240 1180 50  0001 C CNN "Mouser #"
+F 10 "1" H 10240 1180 50  0001 C CNN "Mã hàng"
+	1    10240 1180
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10440 1480 10690 1480
+Wire Wire Line
+	10440 1380 10690 1380
+Wire Wire Line
+	10440 1280 10690 1280
+Wire Wire Line
+	10440 1180 10690 1180
+Wire Wire Line
+	10690 1080 10440 1080
+Wire Wire Line
+	10440 980  10690 980 
+Wire Wire Line
+	10690 880  10440 880 
+Wire Wire Line
+	10440 780  10690 780 
+Text Label 10690 1480 0    50   ~ 0
+PD7
+Text Label 10690 1380 0    50   ~ 0
+PD6
+Text Label 10690 1280 0    50   ~ 0
+PD5
+Text Label 10690 1180 0    50   ~ 0
+PD4
+Text Label 10690 1080 0    50   ~ 0
+PD3
+Text Label 10690 980  0    50   ~ 0
+PD2
+Text Label 10690 880  0    50   ~ 0
+PD1
+Text Label 10690 780  0    50   ~ 0
+PD0
+Wire Wire Line
+	10690 2980 10440 2980
+Wire Wire Line
+	10440 2880 10690 2880
+Wire Wire Line
+	10690 2880 10690 2980
+Wire Wire Line
+	10690 2980 10690 3030
+Connection ~ 10690 2980
+Wire Wire Line
+	10690 1680 10440 1680
+Wire Wire Line
+	10440 1580 10690 1580
+Wire Wire Line
+	10690 1580 10690 1680
+$Comp
+L power:Earth #PWR029
+U 1 1 5F046C36
+P 10690 1730
+F 0 "#PWR029" H 10690 1480 50  0001 C CNN
+F 1 "Earth" H 10690 1580 50  0001 C CNN
+F 2 "" H 10690 1730 50  0001 C CNN
+F 3 "~" H 10690 1730 50  0001 C CNN
+	1    10690 1730
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10690 1680 10690 1730
+Connection ~ 10690 1680
+$Comp
+L power:Earth #PWR030
+U 1 1 5EFE36E3
+P 10690 3030
+F 0 "#PWR030" H 10690 2780 50  0001 C CNN
+F 1 "Earth" H 10690 2880 50  0001 C CNN
+F 2 "" H 10690 3030 50  0001 C CNN
+F 3 "~" H 10690 3030 50  0001 C CNN
+	1    10690 3030
+	1    0    0    -1  
+$EndComp
+Connection ~ 10690 4130
+Wire Wire Line
+	10690 4030 10690 4130
+Connection ~ 10690 4430
+Wire Wire Line
+	10690 4430 10690 4480
+Wire Wire Line
+	10440 4030 10690 4030
+$Comp
+L power:Earth #PWR031
+U 1 1 5ED92B4B
+P 10690 4480
+F 0 "#PWR031" H 10690 4230 50  0001 C CNN
+F 1 "Earth" H 10690 4330 50  0001 C CNN
+F 2 "" H 10690 4480 50  0001 C CNN
+F 3 "~" H 10690 4480 50  0001 C CNN
+	1    10690 4480
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10690 4230 10690 4330
+Connection ~ 10690 4230
+Wire Wire Line
+	10440 4230 10690 4230
+Wire Wire Line
+	10690 4330 10690 4430
+Connection ~ 10690 4330
+Wire Wire Line
+	10440 4330 10690 4330
+Wire Wire Line
+	10690 4430 10440 4430
+Wire Wire Line
+	10690 4130 10690 4230
+Wire Wire Line
+	10440 4130 10690 4130
+Text Label 10690 3530 0    50   ~ 0
+PF0
+Text Label 10690 3630 0    50   ~ 0
+PF1
+Text Label 10690 3730 0    50   ~ 0
+PF2
+Text Label 10690 3830 0    50   ~ 0
+PF3
+Text Label 10690 3930 0    50   ~ 0
+PF4
+Wire Wire Line
+	10440 3930 10690 3930
+Wire Wire Line
+	10440 3830 10690 3830
+Wire Wire Line
+	10440 3730 10690 3730
+Wire Wire Line
+	10440 3630 10690 3630
+Wire Wire Line
+	10440 3530 10690 3530
+$Comp
+L Connector:Conn_01x10_Male J8
+U 1 1 5EC3FE2E
+P 10240 3930
+F 0 "J8" H 10348 4511 50  0000 C CNN
+F 1 "F Port" H 10348 4420 50  0000 C CNN
+F 2 "tm4c:PinHeader_1x10_P2.54mm_Vertical" H 10240 3930 50  0001 C CNN
+F 3 "1" H 10240 3930 50  0001 C CNN
+F 4 "1" H 10240 3930 50  0001 C CNN "Web"
+F 5 "1" H 10240 3930 50  0001 C CNN "Desctription"
+F 6 "1" H 10240 3930 50  0001 C CNN "Digi-Key Part Number"
+F 7 "1" H 10240 3930 50  0001 C CNN "Giá đơn vị"
+F 8 "1" H 10240 3930 50  0001 C CNN "Mfr. #"
+F 9 "1" H 10240 3930 50  0001 C CNN "Mouser #"
+F 10 "1" H 10240 3930 50  0001 C CNN "Mã hàng"
+	1    10240 3930
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R9
+U 1 1 5E21115D
+P 8500 900
+F 0 "R9" V 8200 850 50  0000 L CNN
+F 1 "10k" V 8500 850 50  0000 L CNN
+F 2 "tm4c:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 8430 900 50  0001 C CNN
+F 3 "1" H 8500 900 50  0001 C CNN
+F 4 "1" H 8500 900 50  0001 C CNN "Web"
+F 5 "1" H 8500 900 50  0001 C CNN "Desctription"
+F 6 "1" H 8500 900 50  0001 C CNN "Digi-Key Part Number"
+F 7 "1" H 8500 900 50  0001 C CNN "Giá đơn vị"
+F 8 "1" H 8500 900 50  0001 C CNN "Mfr. #"
+F 9 "1" H 8500 900 50  0001 C CNN "Mouser #"
+F 10 "1" H 8500 900 50  0001 C CNN "Mã hàng"
+	1    8500 900 
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R10
+U 1 1 5E25784D
+P 8500 1000
+F 0 "R10" V 8200 950 50  0000 L CNN
+F 1 "10k" V 8500 950 50  0000 L CNN
+F 2 "tm4c:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 8430 1000 50  0001 C CNN
+F 3 "1" H 8500 1000 50  0001 C CNN
+F 4 "1" H 8500 1000 50  0001 C CNN "Web"
+F 5 "1" H 8500 1000 50  0001 C CNN "Desctription"
+F 6 "1" H 8500 1000 50  0001 C CNN "Digi-Key Part Number"
+F 7 "1" H 8500 1000 50  0001 C CNN "Giá đơn vị"
+F 8 "1" H 8500 1000 50  0001 C CNN "Mfr. #"
+F 9 "1" H 8500 1000 50  0001 C CNN "Mouser #"
+F 10 "1" H 8500 1000 50  0001 C CNN "Mã hàng"
+	1    8500 1000
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R11
+U 1 1 5E257BDA
+P 8500 1100
+F 0 "R11" V 8200 1050 50  0000 L CNN
+F 1 "10k" V 8500 1050 50  0000 L CNN
+F 2 "tm4c:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 8430 1100 50  0001 C CNN
+F 3 "1" H 8500 1100 50  0001 C CNN
+F 4 "1" H 8500 1100 50  0001 C CNN "Web"
+F 5 "1" H 8500 1100 50  0001 C CNN "Desctription"
+F 6 "1" H 8500 1100 50  0001 C CNN "Digi-Key Part Number"
+F 7 "1" H 8500 1100 50  0001 C CNN "Giá đơn vị"
+F 8 "1" H 8500 1100 50  0001 C CNN "Mfr. #"
+F 9 "1" H 8500 1100 50  0001 C CNN "Mouser #"
+F 10 "1" H 8500 1100 50  0001 C CNN "Mã hàng"
+	1    8500 1100
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	8050 900  8350 900 
+Wire Wire Line
+	8050 800  8750 800 
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5E2E6FCB
+P 8700 750
+AR Path="/5DC79FAF/5E2E6FCB" Ref="#PWR?"  Part="1" 
+AR Path="/5E2E6FCB" Ref="#PWR036"  Part="1" 
+F 0 "#PWR036" H 8700 600 50  0001 C CNN
+F 1 "+3.3V" H 8800 900 50  0000 C CNN
+F 2 "" H 8700 750 50  0001 C CNN
+F 3 "" H 8700 750 50  0001 C CNN
+	1    8700 750 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8650 900  8700 900 
+Wire Wire Line
+	8700 900  8700 750 
+Wire Wire Line
+	8650 1000 8700 1000
+Wire Wire Line
+	8700 1000 8700 900 
+Connection ~ 8700 900 
+Wire Wire Line
+	8050 1000 8350 1000
+Wire Wire Line
+	8050 1100 8350 1100
+Wire Wire Line
+	8650 1100 8750 1100
+Wire Wire Line
+	8750 1100 8750 800 
+Connection ~ 8750 800 
+Wire Notes Line
+	7700 550  9050 550 
+Wire Notes Line
+	7700 2200 9050 2200
+Wire Wire Line
+	8900 800  8900 900 
+Wire Wire Line
+	8750 800  8900 800 
+Wire Notes Line
+	7000 3300 7000 4900
+Wire Wire Line
+	4400 1600 4400 1500
+Wire Wire Line
+	4600 1450 4800 1450
+Wire Wire Line
+	4950 1200 4950 1150
+Connection ~ 4950 1150
+Wire Wire Line
+	4950 1150 5500 1150
+Wire Wire Line
+	4400 1500 4950 1500
+Wire Wire Line
+	4800 1150 4950 1150
+Wire Wire Line
+	4800 1150 4800 1450
+Connection ~ 4800 1150
 $EndSCHEMATC
