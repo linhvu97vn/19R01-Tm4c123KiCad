@@ -8,8 +8,8 @@ Title "tm4c"
 Date "2019-12-28"
 Rev "1.2"
 Comp "Future Energy"
-Comment1 ""
-Comment2 ""
+Comment1 "TCK & TMS pull up with 10k Res"
+Comment2 "TD0 pull down with 10k Res"
 Comment3 ""
 Comment4 ""
 $EndDescr
@@ -1800,10 +1800,6 @@ F 3 "~" H 9840 1730 50  0001 C CNN
 	1    9840 1730
 	1    0    0    -1  
 $EndComp
-Text Label 8200 1700 0    50   ~ 0
-VDEBUG
-Wire Wire Line
-	8050 1700 8200 1700
 $Comp
 L Device:R R5
 U 1 1 5E26F9A3
@@ -2406,4 +2402,19 @@ Wire Wire Line
 Wire Wire Line
 	4800 1150 4800 1450
 Connection ~ 4800 1150
+$Comp
+L power:Earth #PWR037
+U 1 1 5E15E177
+P 8300 1750
+F 0 "#PWR037" H 8300 1500 50  0001 C CNN
+F 1 "Earth" H 8300 1600 50  0001 C CNN
+F 2 "" H 8300 1750 50  0001 C CNN
+F 3 "~" H 8300 1750 50  0001 C CNN
+	1    8300 1750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8300 1700 8300 1750
+Wire Wire Line
+	8050 1700 8300 1700
 $EndSCHEMATC
