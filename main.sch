@@ -62,7 +62,7 @@ F 10 "1" H 1050 1300 50  0001 C CNN "Mã hàng"
 	1    0    0    -1  
 $EndComp
 $Comp
-L tm4c:LM1117-3.3 U?
+L tm4c:TLV1117-33 U?
 U 1 1 5DE9FDCD
 P 4500 1150
 AR Path="/5DC79FAF/5DE9FDCD" Ref="U?"  Part="1" 
@@ -1031,7 +1031,7 @@ F 3 "" H 4600 2600 50  0001 C CNN
 $EndComp
 Connection ~ 4600 3000
 $Comp
-L Switch:SW_Push SW2
+L tm4c:SW_Push SW2
 U 1 1 5E8B83A0
 P 6950 950
 F 0 "SW2" H 6750 1250 50  0000 L CNN
@@ -1066,7 +1066,7 @@ Wire Wire Line
 Wire Wire Line
 	7350 950  7350 1150
 $Comp
-L Switch:SW_Push SW3
+L tm4c:SW_Push SW3
 U 1 1 5E8F2D13
 P 6950 1350
 F 0 "SW3" H 6750 1650 50  0000 L CNN

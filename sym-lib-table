@@ -1,3 +1,4 @@
 (sym_lib_table
   (lib (name tm4c)(type Legacy)(uri ${KIPRJMOD}/library/tm4c.lib)(options "")(descr ""))
+  (lib (name main-rescue)(type Legacy)(uri ${KIPRJMOD}/main-rescue.lib)(options "")(descr ""))
 )
