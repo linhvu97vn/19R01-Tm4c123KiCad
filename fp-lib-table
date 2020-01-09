@@ -1,4 +1,0 @@
-(fp_lib_table
-  (lib (name tm4c)(type KiCad)(uri ${KIPRJMOD}/tm4c.pretty)(options "")(descr ""))
-  (lib (name tm4cboard)(type KiCad)(uri C:/Users/vutli/Desktop/tm4cboard.pretty)(options "")(descr ""))
-)
