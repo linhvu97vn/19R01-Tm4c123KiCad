@@ -1,4 +1,4 @@
-(module Crystal_SMD_HC49-SD locked (layer F.Cu) (tedit 5E14A94E)
+(module Crystal_SMD_HC49-SD locked (layer F.Cu) (tedit 5E1755EF)
   (descr "SMD Crystal HC-49-SD http://cdn-reichelt.de/documents/datenblatt/B400/xxx-HC49-SMD.pdf, 11.4x4.7mm^2 package")
   (tags "SMD SMT crystal")
   (attr smd)

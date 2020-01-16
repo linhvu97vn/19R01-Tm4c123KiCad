@@ -1449,8 +1449,6 @@ PE2
 Text Label 9840 4130 0    50   ~ 0
 PE3
 Wire Notes Line
-	11200 550  11200 4850
-Wire Notes Line
 	9100 550  9100 4850
 Text Notes 10250 4800 0    98   ~ 20
 GPIO Ports
@@ -1886,7 +1884,7 @@ U 1 1 5E16E63C
 P 4000 1300
 F 0 "C10" H 3800 1350 50  0000 L CNN
 F 1 "10uF" H 3750 1200 50  0000 L CNN
-F 2 "tm4c:CP_Elec_4x5.4" H 4038 1150 50  0001 C CNN
+F 2 "Capacitor_Tantalum_SMD:CP_EIA-6032-20_AVX-F_Pad2.25x2.35mm_HandSolder" H 4038 1150 50  0001 C CNN
 F 3 "~" H 4000 1300 50  0001 C CNN
 	1    4000 1300
 	1    0    0    -1  
@@ -1897,7 +1895,7 @@ U 1 1 5E188FC5
 P 4850 1300
 F 0 "C12" H 4650 1350 50  0000 L CNN
 F 1 "22uF" H 4600 1200 50  0000 L CNN
-F 2 "tm4c:CP_Elec_4x5.4" H 4888 1150 50  0001 C CNN
+F 2 "Capacitor_Tantalum_SMD:CP_EIA-7343-30_AVX-N_Pad2.25x2.55mm_HandSolder" H 4888 1150 50  0001 C CNN
 F 3 "~" H 4850 1300 50  0001 C CNN
 	1    4850 1300
 	1    0    0    -1  
@@ -2538,19 +2536,6 @@ F 10 "1" H 10240 1180 50  0001 C CNN "Mã hàng"
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+3.3V #PWR?
-U 1 1 5EFC274D
-P 11000 1175
-AR Path="/5DC79FAF/5EFC274D" Ref="#PWR?"  Part="1" 
-AR Path="/5EFC274D" Ref="#PWR051"  Part="1" 
-F 0 "#PWR051" H 11000 1025 50  0001 C CNN
-F 1 "+3.3V" H 11100 1325 50  0000 C CNN
-F 2 "" H 11000 1175 50  0001 C CNN
-F 3 "" H 11000 1175 50  0001 C CNN
-	1    11000 1175
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:+5V #PWR?
 U 1 1 5EFC2A69
 P 10767 1849
@@ -2626,8 +2611,6 @@ Wire Wire Line
 Connection ~ 2010 4900
 Wire Wire Line
 	2010 4900 3050 4900
-Entry Wire Line
-	4560 2200 4660 2300
 Wire Wire Line
 	3750 2000 3750 1950
 Wire Wire Line
@@ -2641,7 +2624,7 @@ U 1 1 5F6AFED4
 P 2210 5400
 F 0 "Y1" H 2354 5446 50  0000 L CNN
 F 1 "Crystal_GND24_Small" H 2354 5355 50  0000 L CNN
-F 2 "Crystal:Crystal_SMD_EuroQuartz_MT-4Pin_3.2x2.5mm_HandSoldering" H 2210 5400 50  0001 C CNN
+F 2 "Crystal:Crystal_SMD_EuroQuartz_MJ-4Pin_5.0x3.2mm" H 2210 5400 50  0001 C CNN
 F 3 "~" H 2210 5400 50  0001 C CNN
 	1    2210 5400
 	1    0    0    -1  
@@ -2680,4 +2663,10 @@ Wire Wire Line
 	2540 5230 2540 5260
 Wire Wire Line
 	2210 5230 2540 5230
+Text Notes 4040 740  0    50   ~ 0
+Use Tantalum to optimize the layout\n(C10;C12)
+Wire Notes Line
+	11200 550  11200 4850
+Text Notes 6970 6430 0    50   ~ 0
+Read carefully PCB design for tiva series before layout
 $EndSCHEMATC
