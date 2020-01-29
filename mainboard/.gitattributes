@@ -1,5 +1,4 @@
-# Example of a `.gitattributes` file which reclassifies `.rb` files as KiCad:
-*.rb linguist-language=KiCad
-
+# Example of a `.gitattributes` file which reclassifies `.rb` files as KiCad Layout:
+*.rb linguist-language=KiCad Layout
 # Replace any whitespace in the language name with hyphens:
 *.glyphs linguist-language=OpenStep-Property-List
