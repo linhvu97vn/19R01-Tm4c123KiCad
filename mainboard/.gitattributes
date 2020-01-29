@@ -1,2 +1,3 @@
-* linguist-vendored
-*.kicad_pcb linguist-vendored=false
+# Example of a `.gitattributes` file which reclassifies `.rb` files as Java:
+*.kicad_pcb linguist-language=Kicad Layout
+*.kicad_pcb-bak linguist-language=Kicad Layout
