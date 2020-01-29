@@ -1,3 +1,6 @@
-# Example of a `.gitattributes` file which reclassifies `.rb` files as Java:
-*.kicad_pcb linguist-language=Kicad Layout
-*.kicad_pcb-bak linguist-language=Kicad Layout
+*.kicad_pcb linguist-detectable=true
+*.sch linguist-detectable=true
+fp-lib-table linguist-generated=true
+*.xml linguist-generated=true
+*.txt linguist-generated=true
+*.pretty/* linguist-vendored=true
