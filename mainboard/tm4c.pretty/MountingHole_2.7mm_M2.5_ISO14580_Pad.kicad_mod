@@ -1,4 +1,4 @@
-(module tm4c:MountingHole_2.7mm_M2.5_ISO14580_Pad (layer F.Cu) (tedit 5E0ACD12)
+(module tm4c:MountingHole_2.7mm_M2.5_ISO14580_Pad locked (layer F.Cu) (tedit 5E0ACD12)
   (descr "Mounting Hole 2.7mm, M2.5, ISO14580")
   (tags "mounting hole 2.7mm m2.5 iso14580")
   (attr virtual)

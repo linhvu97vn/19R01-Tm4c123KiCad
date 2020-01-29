@@ -1,0 +1,2662 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "tm4c"
+Date "2020-01-26"
+Rev "1.3"
+Comp "Future Energy"
+Comment1 "TCK & TMS pull up with 10k Res"
+Comment2 "TD0 pull down with 10k Res"
+Comment3 "Move Decouple Caps"
+Comment4 "Read carefully PCB design for tiva series before layout"
+$EndDescr
+Wire Wire Line
+	4000 1450 4250 1450
+$Comp
+L power:Earth #PWR?
+U 1 1 5DE9FD36
+P 4250 1550
+AR Path="/5DC79FAF/5DE9FD36" Ref="#PWR?"  Part="1" 
+AR Path="/5DE9FD36" Ref="#PWR015"  Part="1" 
+F 0 "#PWR015" H 4250 1300 50  0001 C CNN
+F 1 "Earth" H 4250 1400 50  0001 C CNN
+F 2 "" H 4250 1550 50  0001 C CNN
+F 3 "~" H 4250 1550 50  0001 C CNN
+	1    4250 1550
+	1    0    0    -1  
+$EndComp
+$Comp
+L tm4c:USB_OTG J?
+U 1 1 5DE9FDC6
+P 1050 1300
+AR Path="/5DC79FAF/5DE9FDC6" Ref="J?"  Part="1" 
+AR Path="/5DE9FDC6" Ref="J1"  Part="1" 
+F 0 "J1" H 900 1800 50  0000 C CNN
+F 1 "USB_OTG" H 1000 1700 50  0000 C CNN
+F 2 "tm4c:USB_Micro-B_Molex" H 1200 1250 50  0001 C CNN
+F 3 "1" H 1200 1250 50  0001 C CNN
+F 4 "1" H 1050 1300 50  0001 C CNN "Web"
+F 5 "1" H 1050 1300 50  0001 C CNN "Desctription"
+F 6 "1" H 1050 1300 50  0001 C CNN "Digi-Key Part Number"
+F 7 "1" H 1050 1300 50  0001 C CNN "Giá đơn vị"
+F 8 "1" H 1050 1300 50  0001 C CNN "Mfr. #"
+F 9 "1" H 1050 1300 50  0001 C CNN "Mouser #"
+F 10 "1" H 1050 1300 50  0001 C CNN "Mã hàng"
+	1    1050 1300
+	1    0    0    -1  
+$EndComp
+$Comp
+L tm4c:TLV1117-33 U?
+U 1 1 5DE9FDCD
+P 4350 1100
+AR Path="/5DC79FAF/5DE9FDCD" Ref="U?"  Part="1" 
+AR Path="/5DE9FDCD" Ref="U1"  Part="1" 
+F 0 "U1" H 4150 1350 50  0000 C CNN
+F 1 "LM1117-3.3" H 4350 1250 50  0000 C CNN
+F 2 "tm4c:LM1117-3.3V" H 4350 1100 50  0001 C CNN
+F 3 "1" H 4350 1100 50  0001 C CNN
+F 4 "1" H 4350 1100 50  0001 C CNN "Web"
+F 5 "1" H 4350 1100 50  0001 C CNN "Desctription"
+F 6 "1" H 4350 1100 50  0001 C CNN "Digi-Key Part Number"
+F 7 "1" H 4350 1100 50  0001 C CNN "Giá đơn vị"
+F 8 "1" H 4350 1100 50  0001 C CNN "Mfr. #"
+F 9 "1" H 4350 1100 50  0001 C CNN "Mouser #"
+F 10 "1" H 4350 1100 50  0001 C CNN "Mã hàng"
+	1    4350 1100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1900 1400 1350 1400
+Wire Wire Line
+	1350 1300 1900 1300
+$Comp
+L power:Earth #PWR?
+U 1 1 5DE9FE37
+P 1000 1800
+AR Path="/5DC79FAF/5DE9FE37" Ref="#PWR?"  Part="1" 
+AR Path="/5DE9FE37" Ref="#PWR02"  Part="1" 
+F 0 "#PWR02" H 1000 1550 50  0001 C CNN
+F 1 "Earth" H 1000 1650 50  0001 C CNN
+F 2 "" H 1000 1800 50  0001 C CNN
+F 3 "~" H 1000 1800 50  0001 C CNN
+	1    1000 1800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	950  1700 950  1750
+Wire Wire Line
+	950  1750 1000 1750
+Wire Wire Line
+	1050 1750 1050 1700
+Wire Wire Line
+	1000 1750 1000 1800
+Connection ~ 1000 1750
+Wire Wire Line
+	1000 1750 1050 1750
+Text Label 3450 1800 0    50   ~ 0
+VDEBUG
+Wire Wire Line
+	1350 1100 1600 1100
+Wire Wire Line
+	1350 1500 1900 1500
+Text Label 1900 1500 0    50   ~ 0
+PB0
+Wire Notes Line
+	2250 550  550  550 
+Wire Notes Line
+	550  2200 2250 2200
+Wire Wire Line
+	1850 4780 1850 4980
+Wire Wire Line
+	1950 4780 1850 4780
+Text Label 1950 4780 0    50   ~ 0
+~RESET
+Wire Wire Line
+	2540 7330 2540 7180
+Wire Wire Line
+	2340 7330 2540 7330
+$Comp
+L power:+3.3V #PWR010
+U 1 1 5E516EAF
+P 2540 7180
+F 0 "#PWR010" H 2540 7030 50  0001 C CNN
+F 1 "+3.3V" H 2555 7353 50  0000 C CNN
+F 2 "" H 2540 7180 50  0001 C CNN
+F 3 "" H 2540 7180 50  0001 C CNN
+	1    2540 7180
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1840 7330 2040 7330
+$Comp
+L Device:R R3
+U 1 1 5E50B095
+P 2190 7330
+F 0 "R3" V 2280 7330 50  0000 L CNN
+F 1 "1m" V 2190 7270 50  0000 L CNN
+F 2 "tm4c:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 2120 7330 50  0001 C CNN
+F 3 "1" H 2190 7330 50  0001 C CNN
+F 4 "1" H 2190 7330 50  0001 C CNN "Web"
+F 5 "1" H 2190 7330 50  0001 C CNN "Desctription"
+F 6 "1" H 2190 7330 50  0001 C CNN "Digi-Key Part Number"
+F 7 "1" H 2190 7330 50  0001 C CNN "Giá đơn vị"
+F 8 "1" H 2190 7330 50  0001 C CNN "Mfr. #"
+F 9 "1" H 2190 7330 50  0001 C CNN "Mouser #"
+F 10 "1" H 2190 7330 50  0001 C CNN "Mã hàng"
+	1    2190 7330
+	0    -1   -1   0   
+$EndComp
+Text Label 1840 7330 2    50   ~ 0
+~WAKE
+Wire Wire Line
+	2790 5780 2890 5780
+Text Label 2790 5780 2    50   ~ 0
+~WAKE
+Wire Wire Line
+	2290 5480 2890 5480
+Wire Wire Line
+	1840 5280 2890 5280
+Wire Wire Line
+	2740 6680 2890 6680
+Wire Wire Line
+	2740 6630 2740 6680
+$Comp
+L power:+3.3V #PWR012
+U 1 1 5E4B588F
+P 2740 6630
+F 0 "#PWR012" H 2740 6480 50  0001 C CNN
+F 1 "+3.3V" H 2755 6803 50  0000 C CNN
+F 2 "" H 2740 6630 50  0001 C CNN
+F 3 "" H 2740 6630 50  0001 C CNN
+	1    2740 6630
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2090 6480 2290 6480
+Connection ~ 2090 6480
+Wire Wire Line
+	2090 6330 2090 6480
+Wire Wire Line
+	2190 6330 2090 6330
+Text Label 2190 6330 0    50   ~ 0
+GNDX
+Wire Wire Line
+	3890 7630 3890 7480
+Wire Wire Line
+	3840 7630 3890 7630
+Text Label 3840 7630 2    50   ~ 0
+GNDX
+Connection ~ 2590 6480
+Wire Wire Line
+	2590 6380 2590 6480
+Wire Wire Line
+	2890 6380 2590 6380
+Connection ~ 1590 6480
+Wire Wire Line
+	1590 6180 1590 6480
+Wire Wire Line
+	2890 6180 1590 6180
+Wire Wire Line
+	1890 6480 2090 6480
+Wire Wire Line
+	2590 6780 2590 6480
+Wire Wire Line
+	2290 6780 2590 6780
+Wire Wire Line
+	1590 6780 1990 6780
+Wire Wire Line
+	1590 6480 1590 6780
+$Comp
+L Device:C C?
+U 1 1 5E47621E
+P 2440 6480
+AR Path="/5DC79FAF/5E47621E" Ref="C?"  Part="1" 
+AR Path="/5E47621E" Ref="C5"  Part="1" 
+F 0 "C5" V 2190 6380 50  0000 L CNN
+F 1 "24pF" V 2290 6280 50  0000 L CNN
+F 2 "tm4c:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 2478 6330 50  0001 C CNN
+F 3 "1" H 2440 6480 50  0001 C CNN
+F 4 "1" H 2440 6480 50  0001 C CNN "Mfr. #"
+F 5 "1" H 2440 6480 50  0001 C CNN "Mouser #"
+F 6 "1" H 2440 6480 50  0001 C CNN "Desctription"
+F 7 "1" H 2440 6480 50  0001 C CNN "Digi-Key Part Number"
+F 8 "1" H 2440 6480 50  0001 C CNN "Giá đơn vị"
+F 9 "1" H 2440 6480 50  0001 C CNN "Mã hàng"
+F 10 "1" H 2440 6480 50  0001 C CNN "Web"
+	1    2440 6480
+	0    -1   1    0   
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5E46B394
+P 1740 6480
+AR Path="/5DC79FAF/5E46B394" Ref="C?"  Part="1" 
+AR Path="/5E46B394" Ref="C2"  Part="1" 
+F 0 "C2" V 1490 6530 50  0000 L CNN
+F 1 "24pF" V 1590 6430 50  0000 L CNN
+F 2 "tm4c:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 1778 6330 50  0001 C CNN
+F 3 "1" H 1740 6480 50  0001 C CNN
+F 4 "1" H 1740 6480 50  0001 C CNN "Mfr. #"
+F 5 "1" H 1740 6480 50  0001 C CNN "Mouser #"
+F 6 "1" H 1740 6480 50  0001 C CNN "Desctription"
+F 7 "1" H 1740 6480 50  0001 C CNN "Digi-Key Part Number"
+F 8 "1" H 1740 6480 50  0001 C CNN "Giá đơn vị"
+F 9 "1" H 1740 6480 50  0001 C CNN "Mã hàng"
+F 10 "1" H 1740 6480 50  0001 C CNN "Web"
+	1    1740 6480
+	0    -1   1    0   
+$EndComp
+$Comp
+L Device:Crystal Y?
+U 1 1 5E450FB2
+P 2140 6780
+AR Path="/5DC79FAF/5E450FB2" Ref="Y?"  Part="1" 
+AR Path="/5E450FB2" Ref="Y2"  Part="1" 
+F 0 "Y2" H 2690 6880 50  0000 C CNN
+F 1 "Crystal-32.768KHz" H 2140 6940 50  0000 C CNN
+F 2 "Crystal:Crystal_SMD_MicroCrystal_CC7V-T1A-2Pin_3.2x1.5mm_HandSoldering" H 2140 6780 50  0001 C CNN
+F 3 "1" H 2140 6780 50  0001 C CNN
+F 4 "1" H 2140 6780 50  0001 C CNN "Web"
+F 5 "1" H 2140 6780 50  0001 C CNN "Desctription"
+F 6 "1" H 2140 6780 50  0001 C CNN "Digi-Key Part Number"
+F 7 "1" H 2140 6780 50  0001 C CNN "Giá đơn vị"
+F 8 "1" H 2140 6780 50  0001 C CNN "Mfr. #"
+F 9 "1" H 2140 6780 50  0001 C CNN "Mouser #"
+F 10 "1" H 2140 6780 50  0001 C CNN "Mã hàng"
+	1    2140 6780
+	1    0    0    -1  
+$EndComp
+Connection ~ 1240 4980
+Wire Wire Line
+	1240 4730 1240 4980
+Wire Wire Line
+	1240 4430 1240 4280
+$Comp
+L power:+3.3V #PWR03
+U 1 1 5E3FBAD1
+P 1240 4280
+F 0 "#PWR03" H 1240 4130 50  0001 C CNN
+F 1 "+3.3V" H 1255 4453 50  0000 C CNN
+F 2 "" H 1240 4280 50  0001 C CNN
+F 3 "" H 1240 4280 50  0001 C CNN
+	1    1240 4280
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	590  5630 590  5530
+$Comp
+L power:Earth #PWR01
+U 1 1 5E3EFD6C
+P 590 5630
+F 0 "#PWR01" H 590 5380 50  0001 C CNN
+F 1 "Earth" H 590 5480 50  0001 C CNN
+F 2 "" H 590 5630 50  0001 C CNN
+F 3 "~" H 590 5630 50  0001 C CNN
+	1    590  5630
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_Push SW1
+U 1 1 5E3D79D2
+P 590 5330
+F 0 "SW1" V 544 5478 50  0000 L CNN
+F 1 "SW_Push" V 635 5478 50  0000 L CNN
+F 2 "tm4c:Buttons" H 590 5530 50  0001 C CNN
+F 3 "1" H 590 5530 50  0001 C CNN
+F 4 "1" H 590 5330 50  0001 C CNN "Web"
+F 5 "1" H 590 5330 50  0001 C CNN "Desctription"
+F 6 "1" H 590 5330 50  0001 C CNN "Digi-Key Part Number"
+F 7 "1" H 590 5330 50  0001 C CNN "Giá đơn vị"
+F 8 "1" H 590 5330 50  0001 C CNN "Mfr. #"
+F 9 "1" H 590 5330 50  0001 C CNN "Mouser #"
+F 10 "1" H 590 5330 50  0001 C CNN "Mã hàng"
+	1    590  5330
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 5E3D6058
+P 1240 4580
+F 0 "R2" H 1290 4510 50  0000 L CNN
+F 1 "10k" V 1240 4510 50  0000 L CNN
+F 2 "tm4c:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 1170 4580 50  0001 C CNN
+F 3 "1" H 1240 4580 50  0001 C CNN
+F 4 "1" H 1240 4580 50  0001 C CNN "Web"
+F 5 "1" H 1240 4580 50  0001 C CNN "Desctription"
+F 6 "1" H 1240 4580 50  0001 C CNN "Digi-Key Part Number"
+F 7 "1" H 1240 4580 50  0001 C CNN "Giá đơn vị"
+F 8 "1" H 1240 4580 50  0001 C CNN "Mfr. #"
+F 9 "1" H 1240 4580 50  0001 C CNN "Mouser #"
+F 10 "1" H 1240 4580 50  0001 C CNN "Mã hàng"
+	1    1240 4580
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR011
+U 1 1 5E3197D6
+P 2590 2880
+F 0 "#PWR011" H 2590 2630 50  0001 C CNN
+F 1 "Earth" H 2590 2730 50  0001 C CNN
+F 2 "" H 2590 2880 50  0001 C CNN
+F 3 "~" H 2590 2880 50  0001 C CNN
+	1    2590 2880
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C8
+U 1 1 5E2BA225
+P 3040 2680
+F 0 "C8" H 3155 2726 50  0000 L CNN
+F 1 "1uF" H 3155 2635 50  0000 L CNN
+F 2 "tm4c:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 3078 2530 50  0001 C CNN
+F 3 "1" H 3040 2680 50  0001 C CNN
+F 4 "1" H 3040 2680 50  0001 C CNN "Web"
+F 5 "1" H 3040 2680 50  0001 C CNN "Desctription"
+F 6 "1" H 3040 2680 50  0001 C CNN "Digi-Key Part Number"
+F 7 "1" H 3040 2680 50  0001 C CNN "Giá đơn vị"
+F 8 "1" H 3040 2680 50  0001 C CNN "Mfr. #"
+F 9 "1" H 3040 2680 50  0001 C CNN "Mouser #"
+F 10 "1" H 3040 2680 50  0001 C CNN "Mã hàng"
+	1    3040 2680
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C6
+U 1 1 5E2A73C3
+P 2590 2680
+F 0 "C6" H 2705 2726 50  0000 L CNN
+F 1 "0.1uF" H 2705 2635 50  0000 L CNN
+F 2 "tm4c:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 2628 2530 50  0001 C CNN
+F 3 "1" H 2590 2680 50  0001 C CNN
+F 4 "1" H 2590 2680 50  0001 C CNN "Web"
+F 5 "1" H 2590 2680 50  0001 C CNN "Desctription"
+F 6 "1" H 2590 2680 50  0001 C CNN "Digi-Key Part Number"
+F 7 "1" H 2590 2680 50  0001 C CNN "Giá đơn vị"
+F 8 "1" H 2590 2680 50  0001 C CNN "Mfr. #"
+F 9 "1" H 2590 2680 50  0001 C CNN "Mouser #"
+F 10 "1" H 2590 2680 50  0001 C CNN "Mã hàng"
+	1    2590 2680
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C9
+U 1 1 5E291F16
+P 3540 2680
+F 0 "C9" H 3655 2726 50  0000 L CNN
+F 1 "2.2uF" H 3640 2630 50  0000 L CNN
+F 2 "tm4c:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 3578 2530 50  0001 C CNN
+F 3 "1" H 3540 2680 50  0001 C CNN
+F 4 "1" H 3540 2680 50  0001 C CNN "Web"
+F 5 "1" H 3540 2680 50  0001 C CNN "Desctription"
+F 6 "1" H 3540 2680 50  0001 C CNN "Digi-Key Part Number"
+F 7 "1" H 3540 2680 50  0001 C CNN "Giá đơn vị"
+F 8 "1" H 3540 2680 50  0001 C CNN "Mfr. #"
+F 9 "1" H 3540 2680 50  0001 C CNN "Mouser #"
+F 10 "1" H 3540 2680 50  0001 C CNN "Mã hàng"
+	1    3540 2680
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR024
+U 1 1 5E272769
+P 5490 2740
+F 0 "#PWR024" H 5490 2490 50  0001 C CNN
+F 1 "Earth" H 5490 2590 50  0001 C CNN
+F 2 "" H 5490 2740 50  0001 C CNN
+F 3 "~" H 5490 2740 50  0001 C CNN
+	1    5490 2740
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C18
+U 1 1 5E1F801A
+P 6880 2660
+F 0 "C18" H 6995 2706 50  0000 L CNN
+F 1 "0.01uF" H 6995 2615 50  0000 L CNN
+F 2 "tm4c:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 6918 2510 50  0001 C CNN
+F 3 "1" H 6880 2660 50  0001 C CNN
+F 4 "1" H 6880 2660 50  0001 C CNN "Web"
+F 5 "1" H 6880 2660 50  0001 C CNN "Desctription"
+F 6 "1" H 6880 2660 50  0001 C CNN "Digi-Key Part Number"
+F 7 "1" H 6880 2660 50  0001 C CNN "Giá đơn vị"
+F 8 "1" H 6880 2660 50  0001 C CNN "Mfr. #"
+F 9 "1" H 6880 2660 50  0001 C CNN "Mouser #"
+F 10 "1" H 6880 2660 50  0001 C CNN "Mã hàng"
+	1    6880 2660
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C17
+U 1 1 5E1F7554
+P 6530 2660
+F 0 "C17" H 6645 2706 50  0000 L CNN
+F 1 "1uF" H 6645 2615 50  0000 L CNN
+F 2 "tm4c:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 6568 2510 50  0001 C CNN
+F 3 "1" H 6530 2660 50  0001 C CNN
+F 4 "1" H 6530 2660 50  0001 C CNN "Web"
+F 5 "1" H 6530 2660 50  0001 C CNN "Desctription"
+F 6 "1" H 6530 2660 50  0001 C CNN "Digi-Key Part Number"
+F 7 "1" H 6530 2660 50  0001 C CNN "Giá đơn vị"
+F 8 "1" H 6530 2660 50  0001 C CNN "Mfr. #"
+F 9 "1" H 6530 2660 50  0001 C CNN "Mouser #"
+F 10 "1" H 6530 2660 50  0001 C CNN "Mã hàng"
+	1    6530 2660
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C16
+U 1 1 5E1F609E
+P 6040 2580
+F 0 "C16" H 6155 2626 50  0000 L CNN
+F 1 "0.1uF" H 6155 2535 50  0000 L CNN
+F 2 "tm4c:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 6078 2430 50  0001 C CNN
+F 3 "1" H 6040 2580 50  0001 C CNN
+F 4 "1" H 6040 2580 50  0001 C CNN "Web"
+F 5 "1" H 6040 2580 50  0001 C CNN "Desctription"
+F 6 "1" H 6040 2580 50  0001 C CNN "Digi-Key Part Number"
+F 7 "1" H 6040 2580 50  0001 C CNN "Giá đơn vị"
+F 8 "1" H 6040 2580 50  0001 C CNN "Mfr. #"
+F 9 "1" H 6040 2580 50  0001 C CNN "Mouser #"
+F 10 "1" H 6040 2580 50  0001 C CNN "Mã hàng"
+	1    6040 2580
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C15
+U 1 1 5E1F5737
+P 5490 2590
+F 0 "C15" H 5605 2636 50  0000 L CNN
+F 1 "0.01uF" H 5605 2545 50  0000 L CNN
+F 2 "tm4c:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 5528 2440 50  0001 C CNN
+F 3 "1" H 5490 2590 50  0001 C CNN
+F 4 "1" H 5490 2590 50  0001 C CNN "Web"
+F 5 "1" H 5490 2590 50  0001 C CNN "Desctription"
+F 6 "1" H 5490 2590 50  0001 C CNN "Digi-Key Part Number"
+F 7 "1" H 5490 2590 50  0001 C CNN "Giá đơn vị"
+F 8 "1" H 5490 2590 50  0001 C CNN "Mfr. #"
+F 9 "1" H 5490 2590 50  0001 C CNN "Mouser #"
+F 10 "1" H 5490 2590 50  0001 C CNN "Mã hàng"
+	1    5490 2590
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C11
+U 1 1 5E1DFDFE
+P 4440 2590
+F 0 "C11" H 4555 2636 50  0000 L CNN
+F 1 "0.1uF" H 4555 2545 50  0000 L CNN
+F 2 "tm4c:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 4478 2440 50  0001 C CNN
+F 3 "1" H 4440 2590 50  0001 C CNN
+F 4 "1" H 4440 2590 50  0001 C CNN "Web"
+F 5 "1" H 4440 2590 50  0001 C CNN "Desctription"
+F 6 "1" H 4440 2590 50  0001 C CNN "Digi-Key Part Number"
+F 7 "1" H 4440 2590 50  0001 C CNN "Giá đơn vị"
+F 8 "1" H 4440 2590 50  0001 C CNN "Mfr. #"
+F 9 "1" H 4440 2590 50  0001 C CNN "Mouser #"
+F 10 "1" H 4440 2590 50  0001 C CNN "Mã hàng"
+	1    4440 2590
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4690 3080 4690 3280
+Wire Wire Line
+	4490 3080 4490 3280
+Wire Wire Line
+	4390 3080 4390 3280
+Wire Wire Line
+	4290 3080 4290 3280
+Wire Wire Line
+	4190 3080 4190 3280
+Wire Wire Line
+	2740 4680 2890 4680
+Wire Wire Line
+	2740 4580 2890 4580
+Wire Wire Line
+	2740 4480 2890 4480
+Wire Wire Line
+	2740 4380 2890 4380
+Wire Wire Line
+	2740 4280 2890 4280
+Wire Wire Line
+	2740 4080 2890 4080
+Wire Wire Line
+	2740 3980 2890 3980
+Wire Wire Line
+	2740 3880 2890 3880
+Wire Wire Line
+	2740 3780 2890 3780
+Wire Wire Line
+	2740 3680 2890 3680
+Wire Wire Line
+	2740 3580 2890 3580
+Wire Wire Line
+	5690 6980 5940 6980
+Wire Wire Line
+	5690 6880 5940 6880
+Wire Wire Line
+	5690 6780 5940 6780
+Wire Wire Line
+	5690 6680 5940 6680
+Wire Wire Line
+	5940 6580 5690 6580
+Wire Wire Line
+	5690 6480 5940 6480
+Wire Wire Line
+	5940 6380 5690 6380
+Wire Wire Line
+	5690 6280 5940 6280
+Wire Wire Line
+	5690 6080 5940 6080
+Wire Wire Line
+	5690 5980 5940 5980
+Wire Wire Line
+	5690 5880 5940 5880
+Wire Wire Line
+	5690 5780 5940 5780
+Wire Wire Line
+	5690 5680 5940 5680
+Wire Wire Line
+	5690 5580 5940 5580
+Wire Wire Line
+	5690 5480 5940 5480
+Wire Wire Line
+	5690 5380 5940 5380
+Wire Wire Line
+	5690 5180 5940 5180
+Wire Wire Line
+	5690 5080 5940 5080
+Wire Wire Line
+	5690 4980 5940 4980
+Wire Wire Line
+	5690 4880 5940 4880
+Wire Wire Line
+	5690 4780 5940 4780
+Wire Wire Line
+	5690 4680 5940 4680
+Wire Wire Line
+	5690 4580 5940 4580
+Wire Wire Line
+	5690 4480 5940 4480
+Wire Wire Line
+	5690 4280 5940 4280
+Wire Wire Line
+	5690 4180 5940 4180
+Wire Wire Line
+	5690 4080 5940 4080
+Wire Wire Line
+	5690 3980 5940 3980
+Wire Wire Line
+	5690 3880 5940 3880
+Wire Wire Line
+	5690 3780 5940 3780
+Wire Wire Line
+	5690 3680 5940 3680
+Wire Wire Line
+	5690 3580 5940 3580
+Text Label 2740 4680 2    50   ~ 0
+PF4
+Text Label 2740 4580 2    50   ~ 0
+PF3
+Text Label 2740 4480 2    50   ~ 0
+PF2
+Text Label 2740 4380 2    50   ~ 0
+PF1
+Text Label 2740 4280 2    50   ~ 0
+PF0
+Text Label 2740 4080 2    50   ~ 0
+PE5
+Text Label 2740 3980 2    50   ~ 0
+PE4
+Text Label 2740 3880 2    50   ~ 0
+PE3
+Text Label 2740 3780 2    50   ~ 0
+PE2
+Text Label 2740 3680 2    50   ~ 0
+PE1
+Text Label 2740 3580 2    50   ~ 0
+PE0
+Text Label 5940 6980 0    50   ~ 0
+PD7
+Text Label 5940 6880 0    50   ~ 0
+PD6
+Text Label 5940 6780 0    50   ~ 0
+D+
+Text Label 5940 6680 0    50   ~ 0
+D-
+Text Label 5940 6580 0    50   ~ 0
+PD3
+Text Label 5940 6480 0    50   ~ 0
+PD2
+Text Label 5940 6380 0    50   ~ 0
+PD1
+Text Label 5940 6280 0    50   ~ 0
+PD0
+Text Label 5940 6080 0    50   ~ 0
+PC7
+Text Label 5940 5980 0    50   ~ 0
+PC6
+Text Label 5940 5880 0    50   ~ 0
+PC5
+Text Label 5940 5780 0    50   ~ 0
+PC4
+Text Label 5940 5680 0    50   ~ 0
+PC3
+Text Label 5940 5580 0    50   ~ 0
+PC2
+Text Label 5940 5480 0    50   ~ 0
+PC1
+Text Label 5940 5380 0    50   ~ 0
+PC0
+Text Label 5940 5180 0    50   ~ 0
+PB7
+Text Label 5940 5080 0    50   ~ 0
+PB6
+Text Label 5940 4980 0    50   ~ 0
+PB5
+Text Label 5940 4880 0    50   ~ 0
+PB4
+Text Label 5940 4780 0    50   ~ 0
+PB3
+Text Label 5940 4680 0    50   ~ 0
+PB2
+Text Label 5940 4580 0    50   ~ 0
+PB1
+Text Label 5940 4480 0    50   ~ 0
+PB0
+Text Label 5940 4280 0    50   ~ 0
+PA7
+Text Label 5940 4180 0    50   ~ 0
+PA6
+Text Label 5940 4080 0    50   ~ 0
+PA5
+Text Label 5940 3980 0    50   ~ 0
+PA4
+Text Label 5940 3880 0    50   ~ 0
+PA3
+Text Label 5940 3780 0    50   ~ 0
+PA2
+Text Label 5940 3680 0    50   ~ 0
+PA1
+Text Label 5940 3580 0    50   ~ 0
+PA0
+Wire Wire Line
+	1840 5280 1840 5480
+Connection ~ 1840 5480
+Wire Wire Line
+	1840 5530 1840 5480
+$Comp
+L Device:C C?
+U 1 1 5DE9FDE5
+P 1840 5680
+AR Path="/5DC79FAF/5DE9FDE5" Ref="C?"  Part="1" 
+AR Path="/5DE9FDE5" Ref="C3"  Part="1" 
+F 0 "C3" H 1550 5680 50  0000 L CNN
+F 1 "10pF" H 1550 5760 50  0000 L CNN
+F 2 "tm4c:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 1878 5530 50  0001 C CNN
+F 3 "1" H 1840 5680 50  0001 C CNN
+F 4 "1" H 1840 5680 50  0001 C CNN "Web"
+F 5 "1" H 1840 5680 50  0001 C CNN "Desctription"
+F 6 "1" H 1840 5680 50  0001 C CNN "Digi-Key Part Number"
+F 7 "1" H 1840 5680 50  0001 C CNN "Giá đơn vị"
+F 8 "1" H 1840 5680 50  0001 C CNN "Mfr. #"
+F 9 "1" H 1840 5680 50  0001 C CNN "Mouser #"
+F 10 "1" H 1840 5680 50  0001 C CNN "Mã hàng"
+	1    1840 5680
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	3990 3080 3890 3080
+$Comp
+L power:Earth #PWR?
+U 1 1 5DE9FDA0
+P 1840 5830
+AR Path="/5DC79FAF/5DE9FDA0" Ref="#PWR?"  Part="1" 
+AR Path="/5DE9FDA0" Ref="#PWR06"  Part="1" 
+F 0 "#PWR06" H 1840 5580 50  0001 C CNN
+F 1 "Earth" H 1840 5680 50  0001 C CNN
+F 2 "" H 1840 5830 50  0001 C CNN
+F 3 "~" H 1840 5830 50  0001 C CNN
+	1    1840 5830
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR?
+U 1 1 5DE9FD9A
+P 2290 5830
+AR Path="/5DC79FAF/5DE9FD9A" Ref="#PWR?"  Part="1" 
+AR Path="/5DE9FD9A" Ref="#PWR07"  Part="1" 
+F 0 "#PWR07" H 2290 5580 50  0001 C CNN
+F 1 "Earth" H 2290 5680 50  0001 C CNN
+F 2 "" H 2290 5830 50  0001 C CNN
+F 3 "~" H 2290 5830 50  0001 C CNN
+	1    2290 5830
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5DE9FD5E
+P 2290 5680
+AR Path="/5DC79FAF/5DE9FD5E" Ref="C?"  Part="1" 
+AR Path="/5DE9FD5E" Ref="C4"  Part="1" 
+F 0 "C4" H 2390 5830 50  0000 L CNN
+F 1 "10pF" H 2390 5750 50  0000 L CNN
+F 2 "tm4c:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 2328 5530 50  0001 C CNN
+F 3 "1" H 2290 5680 50  0001 C CNN
+F 4 "1" H 2290 5680 50  0001 C CNN "Web"
+F 5 "1" H 2290 5680 50  0001 C CNN "Desctription"
+F 6 "1" H 2290 5680 50  0001 C CNN "Digi-Key Part Number"
+F 7 "1" H 2290 5680 50  0001 C CNN "Giá đơn vị"
+F 8 "1" H 2290 5680 50  0001 C CNN "Mfr. #"
+F 9 "1" H 2290 5680 50  0001 C CNN "Mouser #"
+F 10 "1" H 2290 5680 50  0001 C CNN "Mã hàng"
+	1    2290 5680
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2290 5530 2290 5480
+Connection ~ 2290 5480
+Wire Wire Line
+	4090 7480 4090 7530
+Wire Wire Line
+	4090 7530 4190 7530
+Connection ~ 4190 7530
+Wire Wire Line
+	4590 7530 4590 7480
+Wire Wire Line
+	4390 7480 4390 7530
+Connection ~ 4390 7530
+Wire Wire Line
+	4390 7530 4590 7530
+Wire Wire Line
+	4390 7530 4340 7530
+Wire Wire Line
+	4290 7530 4290 7480
+Connection ~ 4290 7530
+Wire Wire Line
+	4290 7530 4190 7530
+Wire Wire Line
+	4340 7530 4290 7530
+Wire Wire Line
+	4190 7530 4190 7480
+$Comp
+L power:Earth #PWR?
+U 1 1 5DE9FD1C
+P 4340 7630
+AR Path="/5DC79FAF/5DE9FD1C" Ref="#PWR?"  Part="1" 
+AR Path="/5DE9FD1C" Ref="#PWR017"  Part="1" 
+F 0 "#PWR017" H 4340 7380 50  0001 C CNN
+F 1 "Earth" H 4340 7480 50  0001 C CNN
+F 2 "" H 4340 7630 50  0001 C CNN
+F 3 "~" H 4340 7630 50  0001 C CNN
+	1    4340 7630
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4340 7630 4340 7530
+Connection ~ 4340 7530
+Wire Wire Line
+	4190 3080 4290 3080
+Connection ~ 4290 3080
+Connection ~ 4490 3080
+Wire Wire Line
+	4490 3080 4690 3080
+Connection ~ 4390 3080
+Wire Wire Line
+	4290 3080 4390 3080
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5DE9FCFA
+P 4440 2420
+AR Path="/5DC79FAF/5DE9FCFA" Ref="#PWR?"  Part="1" 
+AR Path="/5DE9FCFA" Ref="#PWR018"  Part="1" 
+F 0 "#PWR018" H 4440 2270 50  0001 C CNN
+F 1 "+3.3V" H 4455 2593 50  0000 C CNN
+F 2 "" H 4440 2420 50  0001 C CNN
+F 3 "" H 4440 2420 50  0001 C CNN
+	1    4440 2420
+	1    0    0    -1  
+$EndComp
+$Comp
+L tm4c:SW_Push SW2
+U 1 1 5E8B83A0
+P 6950 950
+F 0 "SW2" H 6750 1250 50  0000 L CNN
+F 1 "SW_Push" H 6750 1150 50  0000 L CNN
+F 2 "tm4c:Buttons" H 6950 1150 50  0001 C CNN
+F 3 "1" H 6950 1150 50  0001 C CNN
+F 4 "1" H 6950 950 50  0001 C CNN "Web"
+F 5 "1" H 6950 950 50  0001 C CNN "Desctription"
+F 6 "1" H 6950 950 50  0001 C CNN "Digi-Key Part Number"
+F 7 "1" H 6950 950 50  0001 C CNN "Giá đơn vị"
+F 8 "1" H 6950 950 50  0001 C CNN "Mfr. #"
+F 9 "1" H 6950 950 50  0001 C CNN "Mouser #"
+F 10 "1" H 6950 950 50  0001 C CNN "Mã hàng"
+	1    6950 950 
+	1    0    0    -1  
+$EndComp
+Text Label 6250 950  2    50   ~ 0
+PF4
+$Comp
+L power:Earth #PWR029
+U 1 1 5E8DF05D
+P 7350 1150
+F 0 "#PWR029" H 7350 900 50  0001 C CNN
+F 1 "Earth" H 7350 1000 50  0001 C CNN
+F 2 "" H 7350 1150 50  0001 C CNN
+F 3 "~" H 7350 1150 50  0001 C CNN
+	1    7350 1150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7150 950  7350 950 
+Wire Wire Line
+	7350 950  7350 1150
+$Comp
+L tm4c:SW_Push SW3
+U 1 1 5E8F2D13
+P 6950 1350
+F 0 "SW3" H 6750 1650 50  0000 L CNN
+F 1 "SW_Push" H 6750 1550 50  0000 L CNN
+F 2 "tm4c:Buttons" H 6950 1550 50  0001 C CNN
+F 3 "1" H 6950 1550 50  0001 C CNN
+F 4 "1" H 6950 1350 50  0001 C CNN "Web"
+F 5 "1" H 6950 1350 50  0001 C CNN "Desctription"
+F 6 "1" H 6950 1350 50  0001 C CNN "Digi-Key Part Number"
+F 7 "1" H 6950 1350 50  0001 C CNN "Giá đơn vị"
+F 8 "1" H 6950 1350 50  0001 C CNN "Mfr. #"
+F 9 "1" H 6950 1350 50  0001 C CNN "Mouser #"
+F 10 "1" H 6950 1350 50  0001 C CNN "Mã hàng"
+	1    6950 1350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR030
+U 1 1 5E8F3835
+P 7350 1550
+F 0 "#PWR030" H 7350 1300 50  0001 C CNN
+F 1 "Earth" H 7350 1400 50  0001 C CNN
+F 2 "" H 7350 1550 50  0001 C CNN
+F 3 "~" H 7350 1550 50  0001 C CNN
+	1    7350 1550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7150 1350 7350 1350
+Wire Wire Line
+	7350 1350 7350 1550
+Text Label 6250 1350 2    50   ~ 0
+PF0
+Text Label 6300 1650 2    50   ~ 0
+~WAKE
+$Comp
+L Device:R R6
+U 1 1 5E910C55
+P 6500 1650
+F 0 "R6" V 6400 1550 50  0000 L CNN
+F 1 "330" V 6500 1550 50  0000 L CNN
+F 2 "tm4c:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 6430 1650 50  0001 C CNN
+F 3 "1" H 6500 1650 50  0001 C CNN
+F 4 "1" H 6500 1650 50  0001 C CNN "Web"
+F 5 "1" H 6500 1650 50  0001 C CNN "Desctription"
+F 6 "1" H 6500 1650 50  0001 C CNN "Digi-Key Part Number"
+F 7 "1" H 6500 1650 50  0001 C CNN "Giá đơn vị"
+F 8 "1" H 6500 1650 50  0001 C CNN "Mfr. #"
+F 9 "1" H 6500 1650 50  0001 C CNN "Mouser #"
+F 10 "1" H 6500 1650 50  0001 C CNN "Mã hàng"
+	1    6500 1650
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6300 1650 6350 1650
+Wire Wire Line
+	6650 1650 6700 1650
+Wire Wire Line
+	6700 1650 6700 1350
+Connection ~ 6700 1350
+Wire Wire Line
+	6700 1350 6750 1350
+Wire Wire Line
+	6250 950  6750 950 
+Wire Wire Line
+	6250 1350 6700 1350
+Wire Notes Line
+	6050 550  7450 550 
+Wire Notes Line
+	7450 2200 6050 2200
+$Comp
+L Connector:Conn_01x10_Male J5
+U 1 1 5EB0A8AF
+P 9390 2480
+F 0 "J5" H 9498 3061 50  0000 C CNN
+F 1 "A Port" H 9498 2970 50  0000 C CNN
+F 2 "tm4c:PinHeader_1x10_P2.54mm_Vertical" H 9390 2480 50  0001 C CNN
+F 3 "1" H 9390 2480 50  0001 C CNN
+F 4 "1" H 9390 2480 50  0001 C CNN "Web"
+F 5 "1" H 9390 2480 50  0001 C CNN "Desctription"
+F 6 "1" H 9390 2480 50  0001 C CNN "Digi-Key Part Number"
+F 7 "1" H 9390 2480 50  0001 C CNN "Giá đơn vị"
+F 8 "1" H 9390 2480 50  0001 C CNN "Mfr. #"
+F 9 "1" H 9390 2480 50  0001 C CNN "Mouser #"
+F 10 "1" H 9390 2480 50  0001 C CNN "Mã hàng"
+	1    9390 2480
+	1    0    0    -1  
+$EndComp
+Text Label 9840 2080 0    50   ~ 0
+PA0
+Wire Wire Line
+	9590 2080 9840 2080
+Text Label 9840 2180 0    50   ~ 0
+PA1
+Text Label 9840 2280 0    50   ~ 0
+PA2
+Text Label 9840 2380 0    50   ~ 0
+PA3
+Text Label 9840 2480 0    50   ~ 0
+PA4
+Text Label 9840 2580 0    50   ~ 0
+PA5
+Text Label 9840 2680 0    50   ~ 0
+PA6
+Text Label 9840 2780 0    50   ~ 0
+PA7
+Wire Wire Line
+	9590 2180 9840 2180
+Wire Wire Line
+	9590 2280 9840 2280
+Wire Wire Line
+	9590 2380 9840 2380
+Wire Wire Line
+	9590 2480 9840 2480
+Wire Wire Line
+	9590 2680 9840 2680
+Wire Wire Line
+	9590 2780 9840 2780
+Wire Wire Line
+	9590 2580 9840 2580
+$Comp
+L Connector:Conn_01x10_Male J4
+U 1 1 5EBECAC9
+P 9390 1180
+F 0 "J4" H 9498 1761 50  0000 C CNN
+F 1 "C Port" H 9498 1670 50  0000 C CNN
+F 2 "tm4c:PinHeader_1x10_P2.54mm_Vertical" H 9390 1180 50  0001 C CNN
+F 3 "1" H 9390 1180 50  0001 C CNN
+F 4 "1" H 9390 1180 50  0001 C CNN "Web"
+F 5 "1" H 9390 1180 50  0001 C CNN "Desctription"
+F 6 "1" H 9390 1180 50  0001 C CNN "Digi-Key Part Number"
+F 7 "1" H 9390 1180 50  0001 C CNN "Giá đơn vị"
+F 8 "1" H 9390 1180 50  0001 C CNN "Mfr. #"
+F 9 "1" H 9390 1180 50  0001 C CNN "Mouser #"
+F 10 "1" H 9390 1180 50  0001 C CNN "Mã hàng"
+	1    9390 1180
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9590 1480 9840 1480
+Wire Wire Line
+	9590 1380 9840 1380
+Wire Wire Line
+	9590 1280 9840 1280
+Wire Wire Line
+	9590 1180 9840 1180
+Wire Wire Line
+	9590 1080 9840 1080
+Wire Wire Line
+	9590 980  9840 980 
+Wire Wire Line
+	9590 880  9840 880 
+Wire Wire Line
+	9590 780  9840 780 
+Text Label 9840 780  0    50   ~ 0
+PC7
+Text Label 9840 880  0    50   ~ 0
+PC6
+Text Label 9840 980  0    50   ~ 0
+PC5
+Text Label 9840 1080 0    50   ~ 0
+PC4
+Text Label 9840 1180 0    50   ~ 0
+PC3
+Text Label 9840 1280 0    50   ~ 0
+PC2
+Text Label 9840 1380 0    50   ~ 0
+PC1
+Text Label 9840 1480 0    50   ~ 0
+PC0
+Wire Wire Line
+	4000 1150 4000 1100
+Connection ~ 4000 1100
+Wire Wire Line
+	4000 1100 4050 1100
+$Comp
+L power:+5V #PWR?
+U 1 1 5EF2DA47
+P 3900 900
+AR Path="/5DC79FAF/5EF2DA47" Ref="#PWR?"  Part="1" 
+AR Path="/5EF2DA47" Ref="#PWR014"  Part="1" 
+F 0 "#PWR014" H 3900 750 50  0001 C CNN
+F 1 "+5V" H 3915 1073 50  0000 C CNN
+F 2 "" H 3900 900 50  0001 C CNN
+F 3 "" H 3900 900 50  0001 C CNN
+	1    3900 900 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3900 900  3900 1100
+Wire Wire Line
+	3900 1100 4000 1100
+$Comp
+L power:VBUS #PWR05
+U 1 1 5EF4044A
+P 1600 1050
+F 0 "#PWR05" H 1600 900 50  0001 C CNN
+F 1 "VBUS" H 1615 1223 50  0000 C CNN
+F 2 "" H 1600 1050 50  0001 C CNN
+F 3 "" H 1600 1050 50  0001 C CNN
+	1    1600 1050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1600 1050 1600 1100
+Text Label 4100 1950 0    50   ~ 0
+PB1
+$Comp
+L power:VBUS #PWR08
+U 1 1 5EFD0531
+P 2650 850
+F 0 "#PWR08" H 2650 700 50  0001 C CNN
+F 1 "VBUS" H 2665 1023 50  0000 C CNN
+F 2 "" H 2650 850 50  0001 C CNN
+F 3 "" H 2650 850 50  0001 C CNN
+	1    2650 850 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9840 2980 9590 2980
+Wire Wire Line
+	9590 2880 9840 2880
+Wire Wire Line
+	9840 2880 9840 2980
+Wire Wire Line
+	9840 2980 9840 3030
+Connection ~ 9840 2980
+$Comp
+L Device:C C13
+U 1 1 5E532E87
+P 5050 1300
+F 0 "C13" H 5165 1346 50  0000 L CNN
+F 1 "0.1uF" H 5165 1255 50  0000 L CNN
+F 2 "tm4c:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 5088 1150 50  0001 C CNN
+F 3 "1" H 5050 1300 50  0001 C CNN
+F 4 "1" H 5050 1300 50  0001 C CNN "Web"
+F 5 "1" H 5050 1300 50  0001 C CNN "Desctription"
+F 6 "1" H 5050 1300 50  0001 C CNN "Digi-Key Part Number"
+F 7 "1" H 5050 1300 50  0001 C CNN "Giá đơn vị"
+F 8 "1" H 5050 1300 50  0001 C CNN "Mfr. #"
+F 9 "1" H 5050 1300 50  0001 C CNN "Mouser #"
+F 10 "1" H 5050 1300 50  0001 C CNN "Mã hàng"
+	1    5050 1300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG04
+U 1 1 5E593B22
+P 10800 5500
+F 0 "#FLG04" H 10800 5575 50  0001 C CNN
+F 1 "PWR_FLAG" H 10800 5673 50  0000 C CNN
+F 2 "" H 10800 5500 50  0001 C CNN
+F 3 "~" H 10800 5500 50  0001 C CNN
+	1    10800 5500
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:VBUS #PWR048
+U 1 1 5E594EA0
+P 10800 5350
+F 0 "#PWR048" H 10800 5200 50  0001 C CNN
+F 1 "VBUS" H 10815 5523 50  0000 C CNN
+F 2 "" H 10800 5350 50  0001 C CNN
+F 3 "" H 10800 5350 50  0001 C CNN
+	1    10800 5350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10800 5350 10800 5500
+$Comp
+L power:PWR_FLAG #FLG03
+U 1 1 5E60C624
+P 10300 5500
+F 0 "#FLG03" H 10300 5575 50  0001 C CNN
+F 1 "PWR_FLAG" H 10300 5673 50  0000 C CNN
+F 2 "" H 10300 5500 50  0001 C CNN
+F 3 "~" H 10300 5500 50  0001 C CNN
+	1    10300 5500
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG02
+U 1 1 5E62436B
+P 9850 5500
+F 0 "#FLG02" H 9850 5575 50  0001 C CNN
+F 1 "PWR_FLAG" H 9850 5673 50  0000 C CNN
+F 2 "" H 9850 5500 50  0001 C CNN
+F 3 "~" H 9850 5500 50  0001 C CNN
+	1    9850 5500
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	9850 5350 9850 5500
+$Comp
+L power:PWR_FLAG #FLG01
+U 1 1 5E63C015
+P 9400 5500
+F 0 "#FLG01" H 9400 5575 50  0001 C CNN
+F 1 "PWR_FLAG" H 9400 5673 50  0000 C CNN
+F 2 "" H 9400 5500 50  0001 C CNN
+F 3 "~" H 9400 5500 50  0001 C CNN
+	1    9400 5500
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	9400 5350 9400 5500
+$Comp
+L power:Earth #PWR044
+U 1 1 5E66B49D
+P 10450 5400
+F 0 "#PWR044" H 10450 5150 50  0001 C CNN
+F 1 "Earth" H 10450 5250 50  0001 C CNN
+F 2 "" H 10450 5400 50  0001 C CNN
+F 3 "~" H 10450 5400 50  0001 C CNN
+	1    10450 5400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR042
+U 1 1 5E66CD7D
+P 9850 5350
+F 0 "#PWR042" H 9850 5200 50  0001 C CNN
+F 1 "+5V" H 9865 5523 50  0000 C CNN
+F 2 "" H 9850 5350 50  0001 C CNN
+F 3 "" H 9850 5350 50  0001 C CNN
+	1    9850 5350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR038
+U 1 1 5E66D290
+P 9400 5350
+F 0 "#PWR038" H 9400 5200 50  0001 C CNN
+F 1 "+3.3V" H 9415 5523 50  0000 C CNN
+F 2 "" H 9400 5350 50  0001 C CNN
+F 3 "" H 9400 5350 50  0001 C CNN
+	1    9400 5350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H1
+U 1 1 5DF9EEC0
+P 7400 5210
+F 0 "H1" H 7500 5256 50  0000 L CNN
+F 1 "MountingHole" H 7500 5165 50  0000 L CNN
+F 2 "tm4c:MountingHole_2.7mm_M2.5_ISO14580_Pad" H 7400 5210 50  0001 C CNN
+F 3 "1" H 7400 5210 50  0001 C CNN
+F 4 "1" H 7400 5210 50  0001 C CNN "Desctription"
+F 5 "1" H 7400 5210 50  0001 C CNN "Digi-Key Part Number"
+F 6 "1" H 7400 5210 50  0001 C CNN "Giá đơn vị"
+F 7 "1" H 7400 5210 50  0001 C CNN "Mfr. #"
+F 8 "1" H 7400 5210 50  0001 C CNN "Mouser #"
+F 9 "1" H 7400 5210 50  0001 C CNN "Mã hàng"
+F 10 "1" H 7400 5210 50  0001 C CNN "Web"
+	1    7400 5210
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H3
+U 1 1 5DF9F41C
+P 8150 5210
+F 0 "H3" H 8250 5256 50  0000 L CNN
+F 1 "MountingHole" H 8250 5165 50  0000 L CNN
+F 2 "tm4c:MountingHole_2.7mm_M2.5_ISO14580_Pad" H 8150 5210 50  0001 C CNN
+F 3 "1" H 8150 5210 50  0001 C CNN
+F 4 "1" H 8150 5210 50  0001 C CNN "Desctription"
+F 5 "1" H 8150 5210 50  0001 C CNN "Digi-Key Part Number"
+F 6 "1" H 8150 5210 50  0001 C CNN "Giá đơn vị"
+F 7 "1" H 8150 5210 50  0001 C CNN "Mfr. #"
+F 8 "1" H 8150 5210 50  0001 C CNN "Mouser #"
+F 9 "1" H 8150 5210 50  0001 C CNN "Mã hàng"
+F 10 "1" H 8150 5210 50  0001 C CNN "Web"
+	1    8150 5210
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H2
+U 1 1 5DFB69A9
+P 7400 5610
+F 0 "H2" H 7500 5656 50  0000 L CNN
+F 1 "MountingHole" H 7500 5565 50  0000 L CNN
+F 2 "tm4c:MountingHole_2.7mm_M2.5_ISO14580_Pad" H 7400 5610 50  0001 C CNN
+F 3 "1" H 7400 5610 50  0001 C CNN
+F 4 "1" H 7400 5610 50  0001 C CNN "Desctription"
+F 5 "1" H 7400 5610 50  0001 C CNN "Digi-Key Part Number"
+F 6 "1" H 7400 5610 50  0001 C CNN "Giá đơn vị"
+F 7 "1" H 7400 5610 50  0001 C CNN "Mfr. #"
+F 8 "1" H 7400 5610 50  0001 C CNN "Mouser #"
+F 9 "1" H 7400 5610 50  0001 C CNN "Mã hàng"
+F 10 "1" H 7400 5610 50  0001 C CNN "Web"
+	1    7400 5610
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H4
+U 1 1 5DFB6C2C
+P 8150 5610
+F 0 "H4" H 8250 5656 50  0000 L CNN
+F 1 "MountingHole" H 8250 5565 50  0000 L CNN
+F 2 "tm4c:MountingHole_2.7mm_M2.5_ISO14580_Pad" H 8150 5610 50  0001 C CNN
+F 3 "1" H 8150 5610 50  0001 C CNN
+F 4 "1" H 8150 5610 50  0001 C CNN "Desctription"
+F 5 "1" H 8150 5610 50  0001 C CNN "Digi-Key Part Number"
+F 6 "1" H 8150 5610 50  0001 C CNN "Giá đơn vị"
+F 7 "1" H 8150 5610 50  0001 C CNN "Mfr. #"
+F 8 "1" H 8150 5610 50  0001 C CNN "Mouser #"
+F 9 "1" H 8150 5610 50  0001 C CNN "Mã hàng"
+F 10 "1" H 8150 5610 50  0001 C CNN "Web"
+	1    8150 5610
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2900 850  2900 900 
+$Comp
+L power:VBUS #PWR09
+U 1 1 5E1BFBF9
+P 2650 1800
+F 0 "#PWR09" H 2650 1650 50  0001 C CNN
+F 1 "VBUS" H 2665 1973 50  0000 C CNN
+F 2 "" H 2650 1800 50  0001 C CNN
+F 3 "" H 2650 1800 50  0001 C CNN
+	1    2650 1800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2650 1800 2650 1900
+Wire Wire Line
+	2650 1900 2900 1900
+Wire Wire Line
+	2650 850  2900 850 
+Text Label 3450 850  0    50   ~ 0
+VDEBUG
+Wire Wire Line
+	3300 1900 3300 1950
+$Comp
+L tm4c:Slide_Switch_2.54mm S1
+U 1 1 5DF7AE02
+P 3100 1400
+F 0 "S1" H 2650 850 50  0000 L CNN
+F 1 "JS202011SCQN" H 2600 750 50  0000 L CNN
+F 2 "tm4c:Slide_Switch_2.54mm" H 3100 1400 50  0001 L BNN
+F 3 "1" H 3100 1400 50  0001 L BNN
+F 4 "1" H 3100 1400 50  0001 C CNN "Mfr. #"
+F 5 "1" H 3100 1400 50  0001 C CNN "Mouser #"
+F 6 "1" H 3100 1400 50  0001 C CNN "Web"
+F 7 "1" H 3100 1400 50  0001 C CNN "Desctription"
+F 8 "1" H 3100 1400 50  0001 C CNN "Digi-Key Part Number"
+F 9 "1" H 3100 1400 50  0001 C CNN "Giá đơn vị"
+F 10 "1" H 3100 1400 50  0001 C CNN "Mã hàng"
+	1    3100 1400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3300 1950 3400 1950
+Wire Wire Line
+	3400 1950 3400 1800
+Wire Wire Line
+	3300 900  3300 850 
+Wire Wire Line
+	3100 750  3100 900 
+Wire Wire Line
+	3100 1900 3100 2000
+Wire Wire Line
+	3400 1800 3450 1800
+Wire Wire Line
+	3300 850  3450 850 
+Text Notes 1900 2150 0    98   ~ 20
+USB 
+Wire Notes Line
+	5800 2200 5800 550 
+Wire Notes Line
+	5800 550  2500 550 
+Wire Notes Line
+	2500 550  2500 2200
+Wire Notes Line
+	2500 2200 5800 2200
+Text Notes 4550 2150 0    98   ~ 20
+Buck 5V - 3.3V
+Wire Wire Line
+	3890 3080 3890 3280
+Wire Wire Line
+	3990 3080 3990 3280
+Wire Notes Line
+	7150 5010 7150 6160
+Wire Notes Line
+	7150 6160 8850 6160
+Wire Notes Line
+	8850 6160 8850 5010
+Wire Notes Line
+	8850 5010 7150 5010
+Wire Notes Line
+	9100 5000 9100 6150
+Wire Notes Line
+	9100 6150 11100 6150
+Wire Notes Line
+	11100 6150 11100 5000
+Wire Notes Line
+	11100 5000 9100 5000
+Wire Wire Line
+	10300 5250 10450 5250
+Wire Wire Line
+	10450 5250 10450 5400
+Wire Wire Line
+	10300 5250 10300 5500
+Text Notes 10150 6100 0    98   ~ 20
+Power Flags
+Text Notes 7650 6110 0    98   ~ 20
+Mounting Holes
+Connection ~ 9840 4430
+Wire Wire Line
+	10090 4430 10090 4380
+Wire Wire Line
+	9840 4430 10090 4430
+Wire Wire Line
+	9840 4530 9590 4530
+Wire Wire Line
+	9840 4430 9840 4530
+Wire Wire Line
+	9590 4430 9840 4430
+$Comp
+L power:+3.3V #PWR043
+U 1 1 5EE16907
+P 10090 4380
+F 0 "#PWR043" H 10090 4230 50  0001 C CNN
+F 1 "+3.3V" H 10105 4553 50  0000 C CNN
+F 2 "" H 10090 4380 50  0001 C CNN
+F 3 "" H 10090 4380 50  0001 C CNN
+	1    10090 4380
+	1    0    0    -1  
+$EndComp
+Connection ~ 9840 3630
+Wire Wire Line
+	9840 3730 9840 3630
+Wire Wire Line
+	9590 3730 9840 3730
+Wire Wire Line
+	9840 3630 9840 3530
+Wire Wire Line
+	9590 3630 9840 3630
+$Comp
+L power:+5V #PWR041
+U 1 1 5EDF4763
+P 9840 3530
+F 0 "#PWR041" H 9840 3380 50  0001 C CNN
+F 1 "+5V" H 9855 3703 50  0000 C CNN
+F 2 "" H 9840 3530 50  0001 C CNN
+F 3 "" H 9840 3530 50  0001 C CNN
+	1    9840 3530
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x10_Male J6
+U 1 1 5ED35928
+P 9390 4030
+F 0 "J6" H 9498 4611 50  0000 C CNN
+F 1 "E Port" H 9498 4520 50  0000 C CNN
+F 2 "tm4c:PinHeader_1x10_P2.54mm_Vertical" H 9390 4030 50  0001 C CNN
+F 3 "1" H 9390 4030 50  0001 C CNN
+F 4 "1" H 9390 4030 50  0001 C CNN "Web"
+F 5 "1" H 9390 4030 50  0001 C CNN "Desctription"
+F 6 "1" H 9390 4030 50  0001 C CNN "Digi-Key Part Number"
+F 7 "1" H 9390 4030 50  0001 C CNN "Giá đơn vị"
+F 8 "1" H 9390 4030 50  0001 C CNN "Mfr. #"
+F 9 "1" H 9390 4030 50  0001 C CNN "Mouser #"
+F 10 "1" H 9390 4030 50  0001 C CNN "Mã hàng"
+	1    9390 4030
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9590 4330 9840 4330
+Wire Wire Line
+	9590 4230 9840 4230
+Wire Wire Line
+	9590 4130 9840 4130
+Wire Wire Line
+	9590 4030 9840 4030
+Wire Wire Line
+	9590 3930 9840 3930
+Wire Wire Line
+	9590 3830 9840 3830
+Text Label 9840 4330 0    50   ~ 0
+PE5
+Text Label 9840 4230 0    50   ~ 0
+PE4
+Text Label 9840 3830 0    50   ~ 0
+PE0
+Text Label 9840 3930 0    50   ~ 0
+PE1
+Text Label 9840 4030 0    50   ~ 0
+PE2
+Text Label 9840 4130 0    50   ~ 0
+PE3
+Wire Notes Line
+	9100 550  9100 4850
+Text Notes 10250 4800 0    98   ~ 20
+GPIO Ports
+Wire Notes Line
+	2250 550  2250 2200
+Wire Notes Line
+	550  550  550  2200
+Wire Notes Line
+	7450 550  7450 2200
+Wire Notes Line
+	6050 550  6050 2200
+Text Notes 6900 2150 0    98   ~ 20
+Switch
+Wire Notes Line
+	9050 550  9050 2200
+Wire Notes Line
+	7700 550  7700 2200
+Text Notes 8250 2150 0    98   ~ 20
+JTAG Port
+Wire Wire Line
+	2590 2430 3040 2430
+Wire Wire Line
+	2590 2430 2590 2530
+Wire Wire Line
+	3040 2430 3040 2530
+Connection ~ 3040 2430
+Wire Wire Line
+	3040 2430 3540 2430
+Wire Wire Line
+	3540 2430 3540 2530
+Wire Wire Line
+	9840 1680 9840 1730
+Wire Wire Line
+	9590 1580 9840 1580
+Wire Wire Line
+	9840 1680 9590 1680
+Connection ~ 9840 1680
+Wire Wire Line
+	9840 1580 9840 1680
+$Comp
+L power:Earth #PWR039
+U 1 1 5F033588
+P 9840 1730
+F 0 "#PWR039" H 9840 1480 50  0001 C CNN
+F 1 "Earth" H 9840 1580 50  0001 C CNN
+F 2 "" H 9840 1730 50  0001 C CNN
+F 3 "~" H 9840 1730 50  0001 C CNN
+	1    9840 1730
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R4
+U 1 1 5E26F9A3
+P 3950 1950
+F 0 "R4" V 3750 1850 50  0000 L CNN
+F 1 "220" V 3850 1850 50  0000 L CNN
+F 2 "tm4c:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 3880 1950 50  0001 C CNN
+F 3 "1" H 3950 1950 50  0001 C CNN
+F 4 "1" H 3950 1950 50  0001 C CNN "Web"
+F 5 "1" H 3950 1950 50  0001 C CNN "Desctription"
+F 6 "1" H 3950 1950 50  0001 C CNN "Digi-Key Part Number"
+F 7 "1" H 3950 1950 50  0001 C CNN "Giá đơn vị"
+F 8 "1" H 3950 1950 50  0001 C CNN "Mfr. #"
+F 9 "1" H 3950 1950 50  0001 C CNN "Mouser #"
+F 10 "1" H 3950 1950 50  0001 C CNN "Mã hàng"
+	1    3950 1950
+	0    1    1    0   
+$EndComp
+Wire Notes Line
+	7150 4910 8850 4910
+Wire Notes Line
+	8850 3310 7150 3310
+Text Notes 8450 4860 0    98   ~ 20
+RGB
+Wire Notes Line
+	8850 3310 8850 4910
+$Comp
+L Device:LED D?
+U 1 1 5E4DE969
+P 7600 3710
+AR Path="/5DC79FAF/5E4DE969" Ref="D?"  Part="1" 
+AR Path="/5E4DE969" Ref="D2"  Part="1" 
+F 0 "D2" V 7650 3560 50  0000 C CNN
+F 1 "LED" V 7550 3560 50  0000 C CNN
+F 2 "tm4c:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 7600 3710 50  0001 C CNN
+F 3 "1" H 7600 3710 50  0001 C CNN
+F 4 "1" H 7600 3710 50  0001 C CNN "Web"
+F 5 "1" H 7600 3710 50  0001 C CNN "Mfr. #"
+F 6 "1" H 7600 3710 50  0001 C CNN "Mouser #"
+F 7 "1" H 7600 3710 50  0001 C CNN "Desctription"
+F 8 "1" H 7600 3710 50  0001 C CNN "Digi-Key Part Number"
+F 9 "1" H 7600 3710 50  0001 C CNN "Giá đơn vị"
+F 10 "1" H 7600 3710 50  0001 C CNN "Mã hàng"
+	1    7600 3710
+	0    -1   -1   0   
+$EndComp
+Text Label 7400 3560 2    50   ~ 0
+PF1
+Text Label 7950 3560 2    50   ~ 0
+PF2
+Text Label 8300 3560 2    50   ~ 0
+PF3
+Wire Wire Line
+	7400 3560 7600 3560
+$Comp
+L Device:R R7
+U 1 1 5E5217E9
+P 7600 4110
+F 0 "R7" V 7500 4010 50  0000 L CNN
+F 1 "330" V 7600 4010 50  0000 L CNN
+F 2 "tm4c:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 7530 4110 50  0001 C CNN
+F 3 "1" H 7600 4110 50  0001 C CNN
+F 4 "1" H 7600 4110 50  0001 C CNN "Web"
+F 5 "1" H 7600 4110 50  0001 C CNN "Desctription"
+F 6 "1" H 7600 4110 50  0001 C CNN "Digi-Key Part Number"
+F 7 "1" H 7600 4110 50  0001 C CNN "Giá đơn vị"
+F 8 "1" H 7600 4110 50  0001 C CNN "Mfr. #"
+F 9 "1" H 7600 4110 50  0001 C CNN "Mouser #"
+F 10 "1" H 7600 4110 50  0001 C CNN "Mã hàng"
+	1    7600 4110
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	7600 3960 7600 3860
+$Comp
+L power:Earth #PWR031
+U 1 1 5E5385AA
+P 7600 4360
+F 0 "#PWR031" H 7600 4110 50  0001 C CNN
+F 1 "Earth" H 7600 4210 50  0001 C CNN
+F 2 "" H 7600 4360 50  0001 C CNN
+F 3 "~" H 7600 4360 50  0001 C CNN
+	1    7600 4360
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7600 4360 7600 4260
+$Comp
+L Device:LED D?
+U 1 1 5E5665BD
+P 8000 3710
+AR Path="/5DC79FAF/5E5665BD" Ref="D?"  Part="1" 
+AR Path="/5E5665BD" Ref="D3"  Part="1" 
+F 0 "D3" V 8050 3560 50  0000 C CNN
+F 1 "LED" V 7950 3560 50  0000 C CNN
+F 2 "tm4c:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 8000 3710 50  0001 C CNN
+F 3 "1" H 8000 3710 50  0001 C CNN
+F 4 "1" H 8000 3710 50  0001 C CNN "Web"
+F 5 "1" H 8000 3710 50  0001 C CNN "Mfr. #"
+F 6 "1" H 8000 3710 50  0001 C CNN "Mouser #"
+F 7 "1" H 8000 3710 50  0001 C CNN "Desctription"
+F 8 "1" H 8000 3710 50  0001 C CNN "Digi-Key Part Number"
+F 9 "1" H 8000 3710 50  0001 C CNN "Giá đơn vị"
+F 10 "1" H 8000 3710 50  0001 C CNN "Mã hàng"
+	1    8000 3710
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R8
+U 1 1 5E5665C4
+P 8000 4110
+F 0 "R8" V 7900 4010 50  0000 L CNN
+F 1 "330" V 8000 4010 50  0000 L CNN
+F 2 "tm4c:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 7930 4110 50  0001 C CNN
+F 3 "1" H 8000 4110 50  0001 C CNN
+F 4 "1" H 8000 4110 50  0001 C CNN "Web"
+F 5 "1" H 8000 4110 50  0001 C CNN "Desctription"
+F 6 "1" H 8000 4110 50  0001 C CNN "Digi-Key Part Number"
+F 7 "1" H 8000 4110 50  0001 C CNN "Giá đơn vị"
+F 8 "1" H 8000 4110 50  0001 C CNN "Mfr. #"
+F 9 "1" H 8000 4110 50  0001 C CNN "Mouser #"
+F 10 "1" H 8000 4110 50  0001 C CNN "Mã hàng"
+	1    8000 4110
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	8000 3960 8000 3860
+$Comp
+L power:Earth #PWR032
+U 1 1 5E5665CB
+P 8000 4360
+F 0 "#PWR032" H 8000 4110 50  0001 C CNN
+F 1 "Earth" H 8000 4210 50  0001 C CNN
+F 2 "" H 8000 4360 50  0001 C CNN
+F 3 "~" H 8000 4360 50  0001 C CNN
+	1    8000 4360
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8000 4360 8000 4260
+Wire Wire Line
+	7950 3560 8000 3560
+$Comp
+L Device:LED D?
+U 1 1 5E5AAC79
+P 8350 3710
+AR Path="/5DC79FAF/5E5AAC79" Ref="D?"  Part="1" 
+AR Path="/5E5AAC79" Ref="D4"  Part="1" 
+F 0 "D4" V 8400 3560 50  0000 C CNN
+F 1 "LED" V 8300 3560 50  0000 C CNN
+F 2 "tm4c:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 8350 3710 50  0001 C CNN
+F 3 "1" H 8350 3710 50  0001 C CNN
+F 4 "1" H 8350 3710 50  0001 C CNN "Web"
+F 5 "1" H 8350 3710 50  0001 C CNN "Mfr. #"
+F 6 "1" H 8350 3710 50  0001 C CNN "Mouser #"
+F 7 "1" H 8350 3710 50  0001 C CNN "Desctription"
+F 8 "1" H 8350 3710 50  0001 C CNN "Digi-Key Part Number"
+F 9 "1" H 8350 3710 50  0001 C CNN "Giá đơn vị"
+F 10 "1" H 8350 3710 50  0001 C CNN "Mã hàng"
+	1    8350 3710
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R9
+U 1 1 5E5AAC80
+P 8350 4110
+F 0 "R9" V 8250 4010 50  0000 L CNN
+F 1 "330" V 8350 4010 50  0000 L CNN
+F 2 "tm4c:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 8280 4110 50  0001 C CNN
+F 3 "1" H 8350 4110 50  0001 C CNN
+F 4 "1" H 8350 4110 50  0001 C CNN "Web"
+F 5 "1" H 8350 4110 50  0001 C CNN "Desctription"
+F 6 "1" H 8350 4110 50  0001 C CNN "Digi-Key Part Number"
+F 7 "1" H 8350 4110 50  0001 C CNN "Giá đơn vị"
+F 8 "1" H 8350 4110 50  0001 C CNN "Mfr. #"
+F 9 "1" H 8350 4110 50  0001 C CNN "Mouser #"
+F 10 "1" H 8350 4110 50  0001 C CNN "Mã hàng"
+	1    8350 4110
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	8350 3960 8350 3860
+$Comp
+L power:Earth #PWR033
+U 1 1 5E5AAC87
+P 8350 4360
+F 0 "#PWR033" H 8350 4110 50  0001 C CNN
+F 1 "Earth" H 8350 4210 50  0001 C CNN
+F 2 "" H 8350 4360 50  0001 C CNN
+F 3 "~" H 8350 4360 50  0001 C CNN
+	1    8350 4360
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8350 4360 8350 4260
+Wire Wire Line
+	8300 3560 8350 3560
+$Comp
+L tm4c:TM4C123GH6PM U?
+U 1 1 5DE9FDD3
+P 4290 5380
+AR Path="/5DC79FAF/5DE9FDD3" Ref="U?"  Part="1" 
+AR Path="/5DE9FDD3" Ref="U2"  Part="1" 
+F 0 "U2" H 3090 7430 50  0000 C CNN
+F 1 "TM4C123GH6PM" H 5340 3280 98  0000 C CNB
+F 2 "tm4c:TMC123GH6PM" H 4290 5380 50  0001 C CNN
+F 3 "1" H 4290 5580 50  0001 C CNN
+F 4 "1" H 4290 5380 50  0001 C CNN "Mouser #"
+F 5 "1" H 4290 5380 50  0001 C CNN "Mfr. #"
+F 6 "1" H 4290 5380 50  0001 C CNN "Desctription"
+F 7 "1" H 4290 5380 50  0001 C CNN "Digi-Key Part Number"
+F 8 "1" H 4290 5380 50  0001 C CNN "Giá đơn vị"
+F 9 "1" H 4290 5380 50  0001 C CNN "Mã hàng"
+F 10 "1" H 4290 5380 50  0001 C CNN "Web"
+	1    4290 5380
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C7
+U 1 1 5E1E01BE
+P 2790 3080
+F 0 "C7" H 2905 3126 50  0000 L CNN
+F 1 "0.1uF" H 2905 3035 50  0000 L CNN
+F 2 "tm4c:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 2828 2930 50  0001 C CNN
+F 3 "1" H 2790 3080 50  0001 C CNN
+F 4 "1" H 2790 3080 50  0001 C CNN "Web"
+F 5 "1" H 2790 3080 50  0001 C CNN "Desctription"
+F 6 "1" H 2790 3080 50  0001 C CNN "Digi-Key Part Number"
+F 7 "1" H 2790 3080 50  0001 C CNN "Giá đơn vị"
+F 8 "1" H 2790 3080 50  0001 C CNN "Mfr. #"
+F 9 "1" H 2790 3080 50  0001 C CNN "Mouser #"
+F 10 "1" H 2790 3080 50  0001 C CNN "Mã hàng"
+	1    2790 3080
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4250 1400 4250 1450
+Connection ~ 4250 1450
+Wire Notes Line
+	9100 4850 11200 4850
+Wire Notes Line
+	9100 550  11200 550 
+$Comp
+L Connector:Conn_01x10_Male J8
+U 1 1 5EBA1FC9
+P 10240 2480
+F 0 "J8" H 10348 3061 50  0000 C CNN
+F 1 "B Port" H 10348 2970 50  0000 C CNN
+F 2 "tm4c:PinHeader_1x10_P2.54mm_Vertical" H 10240 2480 50  0001 C CNN
+F 3 "1" H 10240 2480 50  0001 C CNN
+F 4 "1" H 10240 2480 50  0001 C CNN "Web"
+F 5 "1" H 10240 2480 50  0001 C CNN "Desctription"
+F 6 "1" H 10240 2480 50  0001 C CNN "Digi-Key Part Number"
+F 7 "1" H 10240 2480 50  0001 C CNN "Giá đơn vị"
+F 8 "1" H 10240 2480 50  0001 C CNN "Mfr. #"
+F 9 "1" H 10240 2480 50  0001 C CNN "Mouser #"
+F 10 "1" H 10240 2480 50  0001 C CNN "Mã hàng"
+	1    10240 2480
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10440 2080 10690 2080
+Wire Wire Line
+	10440 2180 10690 2180
+Wire Wire Line
+	10440 2280 10690 2280
+Wire Wire Line
+	10440 2380 10690 2380
+Wire Wire Line
+	10440 2480 10690 2480
+Wire Wire Line
+	10440 2680 10690 2680
+Wire Wire Line
+	10440 2780 10690 2780
+Wire Wire Line
+	10440 2580 10690 2580
+Text Label 10690 2780 0    50   ~ 0
+PB7
+Text Label 10690 2680 0    50   ~ 0
+PB6
+Text Label 10690 2580 0    50   ~ 0
+PB5
+Text Label 10690 2480 0    50   ~ 0
+PB4
+Text Label 10690 2380 0    50   ~ 0
+PB3
+Text Label 10690 2280 0    50   ~ 0
+PB2
+Text Label 10690 2180 0    50   ~ 0
+PB1
+Text Label 10690 2080 0    50   ~ 0
+PB0
+Wire Wire Line
+	10690 2980 10440 2980
+Connection ~ 10690 4130
+Wire Wire Line
+	10690 4030 10690 4130
+Connection ~ 10690 4430
+Wire Wire Line
+	10690 4430 10690 4480
+Wire Wire Line
+	10440 4030 10690 4030
+$Comp
+L power:Earth #PWR047
+U 1 1 5ED92B4B
+P 10690 4480
+F 0 "#PWR047" H 10690 4230 50  0001 C CNN
+F 1 "Earth" H 10690 4330 50  0001 C CNN
+F 2 "" H 10690 4480 50  0001 C CNN
+F 3 "~" H 10690 4480 50  0001 C CNN
+	1    10690 4480
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10690 4230 10690 4330
+Connection ~ 10690 4230
+Wire Wire Line
+	10440 4230 10690 4230
+Wire Wire Line
+	10690 4330 10690 4430
+Connection ~ 10690 4330
+Wire Wire Line
+	10440 4330 10690 4330
+Wire Wire Line
+	10690 4430 10440 4430
+Wire Wire Line
+	10690 4130 10690 4230
+Wire Wire Line
+	10440 4130 10690 4130
+Text Label 10690 3530 0    50   ~ 0
+PF0
+Text Label 10690 3630 0    50   ~ 0
+PF1
+Text Label 10690 3730 0    50   ~ 0
+PF2
+Text Label 10690 3830 0    50   ~ 0
+PF3
+Text Label 10690 3930 0    50   ~ 0
+PF4
+Wire Wire Line
+	10440 3930 10690 3930
+Wire Wire Line
+	10440 3830 10690 3830
+Wire Wire Line
+	10440 3730 10690 3730
+Wire Wire Line
+	10440 3630 10690 3630
+Wire Wire Line
+	10440 3530 10690 3530
+$Comp
+L Connector:Conn_01x10_Male J9
+U 1 1 5EC3FE2E
+P 10240 3930
+F 0 "J9" H 10348 4511 50  0000 C CNN
+F 1 "F Port" H 10348 4420 50  0000 C CNN
+F 2 "tm4c:PinHeader_1x10_P2.54mm_Vertical" H 10240 3930 50  0001 C CNN
+F 3 "1" H 10240 3930 50  0001 C CNN
+F 4 "1" H 10240 3930 50  0001 C CNN "Web"
+F 5 "1" H 10240 3930 50  0001 C CNN "Desctription"
+F 6 "1" H 10240 3930 50  0001 C CNN "Digi-Key Part Number"
+F 7 "1" H 10240 3930 50  0001 C CNN "Giá đơn vị"
+F 8 "1" H 10240 3930 50  0001 C CNN "Mfr. #"
+F 9 "1" H 10240 3930 50  0001 C CNN "Mouser #"
+F 10 "1" H 10240 3930 50  0001 C CNN "Mã hàng"
+	1    10240 3930
+	1    0    0    -1  
+$EndComp
+Wire Notes Line
+	7700 550  9050 550 
+Wire Notes Line
+	7700 2200 9050 2200
+Wire Notes Line
+	7150 3310 7150 4910
+Wire Wire Line
+	4250 1550 4250 1450
+Text Label 1900 1400 0    50   ~ 0
+D-
+Text Label 1900 1300 0    50   ~ 0
+D+
+$Comp
+L Device:CP C10
+U 1 1 5E16E63C
+P 4000 1300
+F 0 "C10" H 3760 1380 50  0000 L CNN
+F 1 "10uF" H 3750 1200 50  0000 L CNN
+F 2 "Capacitor_Tantalum_SMD:CP_EIA-6032-20_AVX-F_Pad2.25x2.35mm_HandSolder" H 4038 1150 50  0001 C CNN
+F 3 "~" H 4000 1300 50  0001 C CNN
+	1    4000 1300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP C12
+U 1 1 5E188FC5
+P 4850 1300
+F 0 "C12" H 4590 1340 50  0000 L CNN
+F 1 "22uF" H 4600 1200 50  0000 L CNN
+F 2 "Capacitor_Tantalum_SMD:CP_EIA-7343-30_AVX-N_Pad2.25x2.55mm_HandSolder" H 4888 1150 50  0001 C CNN
+F 3 "~" H 4850 1300 50  0001 C CNN
+	1    4850 1300
+	1    0    0    -1  
+$EndComp
+Connection ~ 5550 1100
+Wire Wire Line
+	5550 1200 5550 1100
+Wire Wire Line
+	5550 900  5550 1100
+$Comp
+L power:Earth #PWR?
+U 1 1 5DE9FDFD
+P 5550 1800
+AR Path="/5DC79FAF/5DE9FDFD" Ref="#PWR?"  Part="1" 
+AR Path="/5DE9FDFD" Ref="#PWR022"  Part="1" 
+F 0 "#PWR022" H 5550 1550 50  0001 C CNN
+F 1 "Earth" H 5550 1650 50  0001 C CNN
+F 2 "" H 5550 1800 50  0001 C CNN
+F 3 "~" H 5550 1800 50  0001 C CNN
+	1    5550 1800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5DE9FDF3
+P 5550 1350
+AR Path="/5DC79FAF/5DE9FDF3" Ref="R?"  Part="1" 
+AR Path="/5DE9FDF3" Ref="R5"  Part="1" 
+F 0 "R5" H 5600 1280 50  0000 L CNN
+F 1 "330" V 5550 1270 50  0000 L CNN
+F 2 "tm4c:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 5480 1350 50  0001 C CNN
+F 3 "1" H 5550 1350 50  0001 C CNN
+F 4 "1" H 5550 1350 50  0001 C CNN "Web"
+F 5 "1" H 5550 1350 50  0001 C CNN "Desctription"
+F 6 "1" H 5550 1350 50  0001 C CNN "Digi-Key Part Number"
+F 7 "1" H 5550 1350 50  0001 C CNN "Giá đơn vị"
+F 8 "1" H 5550 1350 50  0001 C CNN "Mfr. #"
+F 9 "1" H 5550 1350 50  0001 C CNN "Mouser #"
+F 10 "1" H 5550 1350 50  0001 C CNN "Mã hàng"
+	1    5550 1350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED D?
+U 1 1 5DE9FDD9
+P 5550 1650
+AR Path="/5DC79FAF/5DE9FDD9" Ref="D?"  Part="1" 
+AR Path="/5DE9FDD9" Ref="D1"  Part="1" 
+F 0 "D1" V 5600 1500 50  0000 C CNN
+F 1 "LED" V 5500 1500 50  0000 C CNN
+F 2 "tm4c:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 5550 1650 50  0001 C CNN
+F 3 "1" H 5550 1650 50  0001 C CNN
+F 4 "1" H 5550 1650 50  0001 C CNN "Web"
+F 5 "1" H 5550 1650 50  0001 C CNN "Mfr. #"
+F 6 "1" H 5550 1650 50  0001 C CNN "Mouser #"
+F 7 "1" H 5550 1650 50  0001 C CNN "Desctription"
+F 8 "1" H 5550 1650 50  0001 C CNN "Digi-Key Part Number"
+F 9 "1" H 5550 1650 50  0001 C CNN "Giá đơn vị"
+F 10 "1" H 5550 1650 50  0001 C CNN "Mã hàng"
+	1    5550 1650
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5DE9FD3C
+P 5550 900
+AR Path="/5DC79FAF/5DE9FD3C" Ref="#PWR?"  Part="1" 
+AR Path="/5DE9FD3C" Ref="#PWR021"  Part="1" 
+F 0 "#PWR021" H 5550 750 50  0001 C CNN
+F 1 "+3.3V" H 5565 1073 50  0000 C CNN
+F 2 "" H 5550 900 50  0001 C CNN
+F 3 "" H 5550 900 50  0001 C CNN
+	1    5550 900 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3100 2000 3750 2000
+Wire Wire Line
+	3750 1100 3900 1100
+Connection ~ 3900 1100
+Wire Wire Line
+	3100 750  3750 750 
+Wire Wire Line
+	3750 750  3750 1100
+Connection ~ 3750 1100
+Wire Wire Line
+	4650 1200 4650 1100
+Connection ~ 4650 1100
+Wire Wire Line
+	4250 1450 4850 1450
+Connection ~ 4850 1450
+Wire Wire Line
+	4850 1450 5050 1450
+Wire Wire Line
+	4650 1100 4850 1100
+Wire Wire Line
+	4850 1150 4850 1100
+Connection ~ 4850 1100
+Wire Wire Line
+	4850 1100 5050 1100
+Wire Wire Line
+	5050 1150 5050 1100
+Connection ~ 5050 1100
+Wire Wire Line
+	5050 1100 5550 1100
+Wire Wire Line
+	3540 2430 3990 2430
+Wire Wire Line
+	3990 2430 3990 3080
+Connection ~ 3540 2430
+Connection ~ 3990 3080
+Wire Wire Line
+	2590 2830 3040 2830
+Connection ~ 3040 2830
+Wire Wire Line
+	3040 2830 3540 2830
+Wire Wire Line
+	2590 2880 2590 2830
+Connection ~ 2590 2830
+Wire Wire Line
+	2790 2930 3890 2930
+Wire Wire Line
+	3890 2930 3890 3080
+Connection ~ 3890 3080
+$Comp
+L power:Earth #PWR013
+U 1 1 5E50DB19
+P 2790 3230
+F 0 "#PWR013" H 2790 2980 50  0001 C CNN
+F 1 "Earth" H 2790 3080 50  0001 C CNN
+F 2 "" H 2790 3230 50  0001 C CNN
+F 3 "~" H 2790 3230 50  0001 C CNN
+	1    2790 3230
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4390 3080 4490 3080
+$Comp
+L power:Earth #PWR026
+U 1 1 5E6637CF
+P 6040 2730
+F 0 "#PWR026" H 6040 2480 50  0001 C CNN
+F 1 "Earth" H 6040 2580 50  0001 C CNN
+F 2 "" H 6040 2730 50  0001 C CNN
+F 3 "~" H 6040 2730 50  0001 C CNN
+	1    6040 2730
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5E6217B2
+P 4940 2420
+AR Path="/5DC79FAF/5E6217B2" Ref="#PWR?"  Part="1" 
+AR Path="/5E6217B2" Ref="#PWR019"  Part="1" 
+F 0 "#PWR019" H 4940 2270 50  0001 C CNN
+F 1 "+3.3V" H 4955 2593 50  0000 C CNN
+F 2 "" H 4940 2420 50  0001 C CNN
+F 3 "" H 4940 2420 50  0001 C CNN
+	1    4940 2420
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C14
+U 1 1 5E1E070F
+P 4940 2590
+F 0 "C14" H 5055 2636 50  0000 L CNN
+F 1 "0.1uF" H 5055 2545 50  0000 L CNN
+F 2 "tm4c:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 4978 2440 50  0001 C CNN
+F 3 "1" H 4940 2590 50  0001 C CNN
+F 4 "1" H 4940 2590 50  0001 C CNN "Web"
+F 5 "1" H 4940 2590 50  0001 C CNN "Desctription"
+F 6 "1" H 4940 2590 50  0001 C CNN "Digi-Key Part Number"
+F 7 "1" H 4940 2590 50  0001 C CNN "Giá đơn vị"
+F 8 "1" H 4940 2590 50  0001 C CNN "Mfr. #"
+F 9 "1" H 4940 2590 50  0001 C CNN "Mouser #"
+F 10 "1" H 4940 2590 50  0001 C CNN "Mã hàng"
+	1    4940 2590
+	1    0    0    -1  
+$EndComp
+Connection ~ 4190 3080
+Wire Wire Line
+	4290 3080 4290 2930
+Wire Wire Line
+	4290 2930 4790 2930
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5E7EEB3A
+P 5490 2420
+AR Path="/5DC79FAF/5E7EEB3A" Ref="#PWR?"  Part="1" 
+AR Path="/5E7EEB3A" Ref="#PWR023"  Part="1" 
+F 0 "#PWR023" H 5490 2270 50  0001 C CNN
+F 1 "+3.3V" H 5505 2593 50  0000 C CNN
+F 2 "" H 5490 2420 50  0001 C CNN
+F 3 "" H 5490 2420 50  0001 C CNN
+	1    5490 2420
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5290 2980 4390 2980
+Wire Wire Line
+	4390 2980 4390 3080
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5E84AFCC
+P 6040 2420
+AR Path="/5DC79FAF/5E84AFCC" Ref="#PWR?"  Part="1" 
+AR Path="/5E84AFCC" Ref="#PWR025"  Part="1" 
+F 0 "#PWR025" H 6040 2270 50  0001 C CNN
+F 1 "+3.3V" H 6055 2593 50  0000 C CNN
+F 2 "" H 6040 2420 50  0001 C CNN
+F 3 "" H 6040 2420 50  0001 C CNN
+	1    6040 2420
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4490 3080 4490 3030
+Wire Wire Line
+	4490 3030 5890 3030
+$Comp
+L power:Earth #PWR020
+U 1 1 5E8AAFAF
+P 4940 2740
+F 0 "#PWR020" H 4940 2490 50  0001 C CNN
+F 1 "Earth" H 4940 2590 50  0001 C CNN
+F 2 "" H 4940 2740 50  0001 C CNN
+F 3 "~" H 4940 2740 50  0001 C CNN
+	1    4940 2740
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6530 2510 6680 2510
+Wire Wire Line
+	4690 3080 6390 3080
+Connection ~ 4690 3080
+Connection ~ 6680 2510
+Wire Wire Line
+	6680 2510 6880 2510
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5E929C92
+P 6680 2410
+AR Path="/5DC79FAF/5E929C92" Ref="#PWR?"  Part="1" 
+AR Path="/5E929C92" Ref="#PWR027"  Part="1" 
+F 0 "#PWR027" H 6680 2260 50  0001 C CNN
+F 1 "+3.3V" H 6695 2583 50  0000 C CNN
+F 2 "" H 6680 2410 50  0001 C CNN
+F 3 "" H 6680 2410 50  0001 C CNN
+	1    6680 2410
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6530 2810 6530 2860
+Wire Wire Line
+	6530 2860 6680 2860
+Wire Wire Line
+	6880 2860 6880 2810
+$Comp
+L power:Earth #PWR028
+U 1 1 5E95E319
+P 6680 2860
+F 0 "#PWR028" H 6680 2610 50  0001 C CNN
+F 1 "Earth" H 6680 2710 50  0001 C CNN
+F 2 "" H 6680 2860 50  0001 C CNN
+F 3 "~" H 6680 2860 50  0001 C CNN
+	1    6680 2860
+	1    0    0    -1  
+$EndComp
+Connection ~ 6680 2860
+Wire Wire Line
+	6680 2860 6880 2860
+Wire Wire Line
+	6680 2410 6680 2510
+Text Label 8200 900  0    50   ~ 0
+PC0
+Text Label 8200 1000 0    50   ~ 0
+PC1
+Text Label 8200 1100 0    50   ~ 0
+PC3
+Text Label 8200 1200 0    50   ~ 0
+PC2
+$Comp
+L power:Earth #PWR037
+U 1 1 5E17673E
+P 8900 900
+F 0 "#PWR037" H 8900 650 50  0001 C CNN
+F 1 "Earth" H 8900 750 50  0001 C CNN
+F 2 "" H 8900 900 50  0001 C CNN
+F 3 "~" H 8900 900 50  0001 C CNN
+	1    8900 900 
+	1    0    0    -1  
+$EndComp
+Text Label 8200 1500 0    50   ~ 0
+~RESET
+$Comp
+L Connector:Conn_01x10_Male J3
+U 1 1 5E99C1D8
+P 7850 1300
+F 0 "J3" H 7850 1930 50  0000 C CNN
+F 1 "JTAG Port" H 7970 1850 50  0000 C CNN
+F 2 "tm4c:PinHeader_1x10_P2.54mm_Vertical" H 7850 1300 50  0001 C CNN
+F 3 "1" H 7850 1300 50  0001 C CNN
+F 4 "1" H 7850 1300 50  0001 C CNN "Web"
+F 5 "1" H 7850 1300 50  0001 C CNN "Desctription"
+F 6 "1" H 7850 1300 50  0001 C CNN "Digi-Key Part Number"
+F 7 "1" H 7850 1300 50  0001 C CNN "Giá đơn vị"
+F 8 "1" H 7850 1300 50  0001 C CNN "Mfr. #"
+F 9 "1" H 7850 1300 50  0001 C CNN "Mouser #"
+F 10 "1" H 7850 1300 50  0001 C CNN "Mã hàng"
+	1    7850 1300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8050 1300 8200 1300
+Text Label 8200 1700 0    50   ~ 0
+PA1
+Text Label 8200 1800 0    50   ~ 0
+PA0
+Wire Wire Line
+	8200 1700 8050 1700
+Text Notes 8050 900  0    50   ~ 0
+TCK
+Text Notes 8050 1000 0    50   ~ 0
+TMS
+Text Notes 8050 1100 0    50   ~ 0
+TDO
+Text Notes 8050 1200 0    50   ~ 0
+TDI
+$Comp
+L Device:R R10
+U 1 1 5E21115D
+P 8500 900
+F 0 "R10" V 8200 850 50  0000 L CNN
+F 1 "10k" V 8500 850 50  0000 L CNN
+F 2 "tm4c:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 8430 900 50  0001 C CNN
+F 3 "1" H 8500 900 50  0001 C CNN
+F 4 "1" H 8500 900 50  0001 C CNN "Web"
+F 5 "1" H 8500 900 50  0001 C CNN "Desctription"
+F 6 "1" H 8500 900 50  0001 C CNN "Digi-Key Part Number"
+F 7 "1" H 8500 900 50  0001 C CNN "Giá đơn vị"
+F 8 "1" H 8500 900 50  0001 C CNN "Mfr. #"
+F 9 "1" H 8500 900 50  0001 C CNN "Mouser #"
+F 10 "1" H 8500 900 50  0001 C CNN "Mã hàng"
+	1    8500 900 
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R11
+U 1 1 5E25784D
+P 8500 1000
+F 0 "R11" V 8200 950 50  0000 L CNN
+F 1 "10k" V 8500 950 50  0000 L CNN
+F 2 "tm4c:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 8430 1000 50  0001 C CNN
+F 3 "1" H 8500 1000 50  0001 C CNN
+F 4 "1" H 8500 1000 50  0001 C CNN "Web"
+F 5 "1" H 8500 1000 50  0001 C CNN "Desctription"
+F 6 "1" H 8500 1000 50  0001 C CNN "Digi-Key Part Number"
+F 7 "1" H 8500 1000 50  0001 C CNN "Giá đơn vị"
+F 8 "1" H 8500 1000 50  0001 C CNN "Mfr. #"
+F 9 "1" H 8500 1000 50  0001 C CNN "Mouser #"
+F 10 "1" H 8500 1000 50  0001 C CNN "Mã hàng"
+	1    8500 1000
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R12
+U 1 1 5E257BDA
+P 8500 1100
+F 0 "R12" V 8200 1050 50  0000 L CNN
+F 1 "10k" V 8500 1050 50  0000 L CNN
+F 2 "tm4c:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 8430 1100 50  0001 C CNN
+F 3 "1" H 8500 1100 50  0001 C CNN
+F 4 "1" H 8500 1100 50  0001 C CNN "Web"
+F 5 "1" H 8500 1100 50  0001 C CNN "Desctription"
+F 6 "1" H 8500 1100 50  0001 C CNN "Digi-Key Part Number"
+F 7 "1" H 8500 1100 50  0001 C CNN "Giá đơn vị"
+F 8 "1" H 8500 1100 50  0001 C CNN "Mfr. #"
+F 9 "1" H 8500 1100 50  0001 C CNN "Mouser #"
+F 10 "1" H 8500 1100 50  0001 C CNN "Mã hàng"
+	1    8500 1100
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	8050 900  8350 900 
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5E2E6FCB
+P 8700 750
+AR Path="/5DC79FAF/5E2E6FCB" Ref="#PWR?"  Part="1" 
+AR Path="/5E2E6FCB" Ref="#PWR035"  Part="1" 
+F 0 "#PWR035" H 8700 600 50  0001 C CNN
+F 1 "+3.3V" H 8800 900 50  0000 C CNN
+F 2 "" H 8700 750 50  0001 C CNN
+F 3 "" H 8700 750 50  0001 C CNN
+	1    8700 750 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8650 900  8700 900 
+Wire Wire Line
+	8700 900  8700 750 
+Wire Wire Line
+	8650 1000 8700 1000
+Wire Wire Line
+	8700 1000 8700 900 
+Connection ~ 8700 900 
+Wire Wire Line
+	8050 1000 8350 1000
+Wire Wire Line
+	8050 1100 8350 1100
+Wire Wire Line
+	8650 1100 8750 1100
+Wire Wire Line
+	8750 1100 8750 800 
+Wire Wire Line
+	8900 800  8900 900 
+Wire Wire Line
+	8750 800  8900 800 
+Wire Wire Line
+	8050 1200 8200 1200
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5EAD27A9
+P 8700 1600
+AR Path="/5DC79FAF/5EAD27A9" Ref="#PWR?"  Part="1" 
+AR Path="/5EAD27A9" Ref="#PWR036"  Part="1" 
+F 0 "#PWR036" H 8700 1450 50  0001 C CNN
+F 1 "+3.3V" H 8800 1750 50  0000 C CNN
+F 2 "" H 8700 1600 50  0001 C CNN
+F 3 "" H 8700 1600 50  0001 C CNN
+	1    8700 1600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR034
+U 1 1 5EB06FD8
+P 8550 1400
+F 0 "#PWR034" H 8550 1150 50  0001 C CNN
+F 1 "Earth" H 8550 1250 50  0001 C CNN
+F 2 "" H 8550 1400 50  0001 C CNN
+F 3 "~" H 8550 1400 50  0001 C CNN
+	1    8550 1400
+	1    0    0    -1  
+$EndComp
+Text Label 8200 1300 0    50   ~ 0
+VDEBUG
+Wire Wire Line
+	8050 1800 8200 1800
+Wire Wire Line
+	8050 1400 8350 1400
+Wire Wire Line
+	8350 1400 8350 1350
+Wire Wire Line
+	8550 1350 8550 1400
+Wire Wire Line
+	8350 1350 8550 1350
+Wire Wire Line
+	8050 1500 8200 1500
+Wire Wire Line
+	8050 1600 8700 1600
+$Comp
+L Connector:Conn_01x01_Male J2
+U 1 1 5EDD0201
+P 2540 5880
+F 0 "J2" H 2540 5730 50  0000 C CNN
+F 1 "HIB" H 2590 5830 50  0000 C CNN
+F 2 "tm4c:PinHeader_1x01_P2.54mm_Vertical" H 2540 5880 50  0001 C CNN
+F 3 "~" H 2540 5880 50  0001 C CNN
+	1    2540 5880
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2890 5880 2740 5880
+Wire Wire Line
+	1240 4980 1850 4980
+$Comp
+L Device:C C?
+U 1 1 5EE70666
+P 1240 5330
+AR Path="/5DC79FAF/5EE70666" Ref="C?"  Part="1" 
+AR Path="/5EE70666" Ref="C1"  Part="1" 
+F 0 "C1" H 1390 5280 50  0000 L CNN
+F 1 "0.1uF" H 1390 5380 50  0000 L CNN
+F 2 "tm4c:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 1278 5180 50  0001 C CNN
+F 3 "1" H 1240 5330 50  0001 C CNN
+F 4 "1" H 1240 5330 50  0001 C CNN "Web"
+F 5 "1" H 1240 5330 50  0001 C CNN "Desctription"
+F 6 "1" H 1240 5330 50  0001 C CNN "Digi-Key Part Number"
+F 7 "1" H 1240 5330 50  0001 C CNN "Giá đơn vị"
+F 8 "1" H 1240 5330 50  0001 C CNN "Mfr. #"
+F 9 "1" H 1240 5330 50  0001 C CNN "Mouser #"
+F 10 "1" H 1240 5330 50  0001 C CNN "Mã hàng"
+	1    1240 5330
+	1    0    0    1   
+$EndComp
+$Comp
+L power:Earth #PWR?
+U 1 1 5EE70D34
+P 1240 5480
+AR Path="/5DC79FAF/5EE70D34" Ref="#PWR?"  Part="1" 
+AR Path="/5EE70D34" Ref="#PWR04"  Part="1" 
+F 0 "#PWR04" H 1240 5230 50  0001 C CNN
+F 1 "Earth" H 1240 5330 50  0001 C CNN
+F 2 "" H 1240 5480 50  0001 C CNN
+F 3 "~" H 1240 5480 50  0001 C CNN
+	1    1240 5480
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1240 4980 1240 5180
+$Comp
+L Device:R R1
+U 1 1 5EE8C0A0
+P 990 4980
+F 0 "R1" H 1040 4910 50  0000 L CNN
+F 1 "470" V 990 4910 50  0000 L CNN
+F 2 "tm4c:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 920 4980 50  0001 C CNN
+F 3 "1" H 990 4980 50  0001 C CNN
+F 4 "1" H 990 4980 50  0001 C CNN "Web"
+F 5 "1" H 990 4980 50  0001 C CNN "Desctription"
+F 6 "1" H 990 4980 50  0001 C CNN "Digi-Key Part Number"
+F 7 "1" H 990 4980 50  0001 C CNN "Giá đơn vị"
+F 8 "1" H 990 4980 50  0001 C CNN "Mfr. #"
+F 9 "1" H 990 4980 50  0001 C CNN "Mouser #"
+F 10 "1" H 990 4980 50  0001 C CNN "Mã hàng"
+	1    990  4980
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1140 4980 1240 4980
+Text Label 10690 780  0    50   ~ 0
+PD0
+Text Label 10690 880  0    50   ~ 0
+PD1
+Text Label 10690 980  0    50   ~ 0
+PD2
+Text Label 10690 1080 0    50   ~ 0
+PD3
+Text Label 10690 1180 0    50   ~ 0
+D-
+Text Label 10690 1280 0    50   ~ 0
+D+
+Text Label 10690 1380 0    50   ~ 0
+PD6
+Text Label 10690 1480 0    50   ~ 0
+PD7
+Wire Wire Line
+	10690 1680 10440 1680
+Wire Wire Line
+	10440 780  10690 780 
+Wire Wire Line
+	10690 880  10440 880 
+Wire Wire Line
+	10440 980  10690 980 
+Wire Wire Line
+	10690 1080 10440 1080
+Wire Wire Line
+	10440 1180 10690 1180
+Wire Wire Line
+	10440 1280 10690 1280
+Wire Wire Line
+	10440 1380 10690 1380
+Wire Wire Line
+	10440 1480 10690 1480
+$Comp
+L Connector:Conn_01x10_Male J7
+U 1 1 5EBED8DF
+P 10240 1180
+F 0 "J7" H 10348 1761 50  0000 C CNN
+F 1 "D Port" H 10348 1670 50  0000 C CNN
+F 2 "tm4c:PinHeader_1x10_P2.54mm_Vertical" H 10240 1180 50  0001 C CNN
+F 3 "1" H 10240 1180 50  0001 C CNN
+F 4 "1" H 10240 1180 50  0001 C CNN "Web"
+F 5 "1" H 10240 1180 50  0001 C CNN "Desctription"
+F 6 "1" H 10240 1180 50  0001 C CNN "Digi-Key Part Number"
+F 7 "1" H 10240 1180 50  0001 C CNN "Giá đơn vị"
+F 8 "1" H 10240 1180 50  0001 C CNN "Mfr. #"
+F 9 "1" H 10240 1180 50  0001 C CNN "Mouser #"
+F 10 "1" H 10240 1180 50  0001 C CNN "Mã hàng"
+	1    10240 1180
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 5EFC2A69
+P 10767 1849
+AR Path="/5DC79FAF/5EFC2A69" Ref="#PWR?"  Part="1" 
+AR Path="/5EFC2A69" Ref="#PWR050"  Part="1" 
+F 0 "#PWR050" H 10767 1699 50  0001 C CNN
+F 1 "+5V" H 10850 1958 50  0000 C CNN
+F 2 "" H 10767 1849 50  0001 C CNN
+F 3 "" H 10767 1849 50  0001 C CNN
+	1    10767 1849
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10440 2880 10870 2880
+Wire Wire Line
+	10440 1580 10870 1580
+$Comp
+L power:Earth #PWR045
+U 1 1 5F046C36
+P 10870 1580
+F 0 "#PWR045" H 10870 1330 50  0001 C CNN
+F 1 "Earth" H 10870 1430 50  0001 C CNN
+F 2 "" H 10870 1580 50  0001 C CNN
+F 3 "~" H 10870 1580 50  0001 C CNN
+	1    10870 1580
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10690 1849 10767 1849
+Wire Wire Line
+	10690 1680 10690 1849
+$Comp
+L power:+5V #PWR?
+U 1 1 5F09E6B3
+P 10690 2980
+AR Path="/5DC79FAF/5F09E6B3" Ref="#PWR?"  Part="1" 
+AR Path="/5F09E6B3" Ref="#PWR049"  Part="1" 
+F 0 "#PWR049" H 10690 2830 50  0001 C CNN
+F 1 "+5V" H 10750 3130 50  0000 C CNN
+F 2 "" H 10690 2980 50  0001 C CNN
+F 3 "" H 10690 2980 50  0001 C CNN
+	1    10690 2980
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR046
+U 1 1 5EFE36E3
+P 10870 2880
+F 0 "#PWR046" H 10870 2630 50  0001 C CNN
+F 1 "Earth" H 10870 2730 50  0001 C CNN
+F 2 "" H 10870 2880 50  0001 C CNN
+F 3 "~" H 10870 2880 50  0001 C CNN
+	1    10870 2880
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9950 3030 9840 3030
+$Comp
+L tm4c:+3.3V #PWR040
+U 1 1 5F3E922F
+P 9950 3030
+F 0 "#PWR040" H 9950 2880 50  0001 C CNN
+F 1 "+3.3V" H 9965 3203 50  0000 C CNN
+F 2 "" H 9950 3030 50  0001 C CNN
+F 3 "" H 9950 3030 50  0001 C CNN
+	1    9950 3030
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	840  4980 590  4980
+Wire Wire Line
+	590  4980 590  5130
+Connection ~ 1850 4980
+Wire Wire Line
+	1850 4980 2890 4980
+Wire Wire Line
+	3750 2000 3750 1950
+Wire Wire Line
+	3800 1950 3750 1950
+Connection ~ 3750 1950
+Wire Wire Line
+	3750 1950 3750 1100
+$Comp
+L Device:Crystal_GND24_Small Y1
+U 1 1 5F6AFED4
+P 2050 5480
+F 0 "Y1" H 2194 5526 50  0000 L CNN
+F 1 "Crystal_GND24_Small" H 1740 5740 50  0000 L CNN
+F 2 "Crystal:Crystal_SMD_EuroQuartz_MJ-4Pin_5.0x3.2mm" H 2050 5480 50  0001 C CNN
+F 3 "~" H 2050 5480 50  0001 C CNN
+	1    2050 5480
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2150 5480 2290 5480
+Wire Wire Line
+	1840 5480 1950 5480
+$Comp
+L power:Earth #PWR052
+U 1 1 5F723C38
+P 2050 5790
+F 0 "#PWR052" H 2050 5540 50  0001 C CNN
+F 1 "Earth" H 2050 5640 50  0001 C CNN
+F 2 "" H 2050 5790 50  0001 C CNN
+F 3 "~" H 2050 5790 50  0001 C CNN
+	1    2050 5790
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2050 5580 2050 5790
+$Comp
+L power:Earth #PWR053
+U 1 1 5F75BC89
+P 2380 5340
+F 0 "#PWR053" H 2380 5090 50  0001 C CNN
+F 1 "Earth" H 2380 5190 50  0001 C CNN
+F 2 "" H 2380 5340 50  0001 C CNN
+F 3 "~" H 2380 5340 50  0001 C CNN
+	1    2380 5340
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2050 5380 2050 5310
+Wire Wire Line
+	2380 5310 2380 5340
+Wire Wire Line
+	2050 5310 2380 5310
+Text Notes 4040 740  0    50   ~ 0
+Use Tantalum to optimize the layout\n(C10;C12)
+Wire Notes Line
+	11200 550  11200 4850
+$Comp
+L power:Earth #PWR016
+U 1 1 5E8AB3BC
+P 4440 2740
+F 0 "#PWR016" H 4440 2490 50  0001 C CNN
+F 1 "Earth" H 4440 2590 50  0001 C CNN
+F 2 "" H 4440 2740 50  0001 C CNN
+F 3 "~" H 4440 2740 50  0001 C CNN
+	1    4440 2740
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4440 2420 4440 2430
+Wire Wire Line
+	4190 2430 4440 2430
+Wire Wire Line
+	4190 2430 4190 3080
+Connection ~ 4440 2430
+Wire Wire Line
+	4440 2430 4440 2440
+Wire Wire Line
+	4940 2440 4940 2430
+Wire Wire Line
+	4790 2430 4940 2430
+Wire Wire Line
+	4790 2430 4790 2930
+Connection ~ 4940 2430
+Wire Wire Line
+	4940 2430 4940 2420
+Wire Wire Line
+	5490 2440 5490 2430
+Wire Wire Line
+	5290 2430 5490 2430
+Wire Wire Line
+	5290 2430 5290 2980
+Connection ~ 5490 2430
+Wire Wire Line
+	5490 2430 5490 2420
+Wire Wire Line
+	6040 2430 6040 2420
+Wire Wire Line
+	6040 2420 5890 2420
+Wire Wire Line
+	5890 2420 5890 3030
+Connection ~ 6040 2420
+Wire Wire Line
+	6390 2510 6530 2510
+Wire Wire Line
+	6390 2510 6390 3080
+Connection ~ 6530 2510
+$EndSCHEMATC

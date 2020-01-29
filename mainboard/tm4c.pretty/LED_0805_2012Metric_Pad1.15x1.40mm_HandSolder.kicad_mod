@@ -1,8 +1,8 @@
-(module LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder locked (layer F.Cu) (tedit 5E14A98A)
+(module tm4c:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder (layer F.Cu) (tedit 5E14A98A)
   (descr "LED SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: https://docs.google.com/spreadsheets/d/1BsfQQcO9C6DZCsRaXUlFlo91Tg2WpOkGARC1WS5S8t0/edit?usp=sharing), generated with kicad-footprint-generator")
   (tags "LED handsolder")
   (attr smd)
-  (fp_text reference D4 (at -2.921 0) (layer F.SilkS)
+  (fp_text reference B (at 0 4.572) (layer F.SilkS)
     (effects (font (size 1 1) (thickness 0.15)))
   )
   (fp_text value LED (at 0 1.65) (layer F.Fab)
@@ -30,12 +30,12 @@
   (fp_line (start -0.261252 -0.71) (end 0.261252 -0.71) (layer F.SilkS) (width 0.12))
   (pad 2 smd roundrect (at 1.025 0) (size 1.15 1.4) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.217391))
   (pad 1 smd roundrect (at -1.025 0) (size 1.15 1.4) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.217391))
-  (model "${KIPRJMOD}/tm4c.3dshapes/LED 0805 Lens BLUE.STEP"
+  (model "${KIPRJMOD}/tm4c.3dshapes/LED 0805 Lens BLUE.wrl"
     (at (xyz 0 0 0))
     (scale (xyz 1 1 1))
     (rotate (xyz -90 0 0))
   )
-  (model "${KIPRJMOD}/tm4c.3dshapes/LED 0805 Base BLUE.STEP"
+  (model "${KIPRJMOD}/tm4c.3dshapes/LED 0805 Base BLUE.wrl"
     (at (xyz 0 0 0))
     (scale (xyz 1 1 1))
     (rotate (xyz -90 0 0))

@@ -1,9 +1,9 @@
-(module Buttons locked (layer F.Cu) (tedit 5E175A16)
+(module tm4c:Buttons (layer F.Cu) (tedit 5E175A16)
   (descr RS282G05A3SMRT-1)
   (tags Switch)
   (attr smd)
-  (fp_text reference SW2 (at -3.175 3.81) (layer F.SilkS)
-    (effects (font (size 1.27 1.27) (thickness 0.254)))
+  (fp_text reference SW2 (at -6.985 0) (layer F.SilkS)
+    (effects (font (size 1 1) (thickness 0.15)))
   )
   (fp_text value SW_Push (at 0 0) (layer Dwgs.User) hide
     (effects (font (size 1.27 1.27) (thickness 0.254)))

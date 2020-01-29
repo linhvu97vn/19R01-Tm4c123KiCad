@@ -1,6 +1,6 @@
-(module Earth (layer F.Cu) (tedit 5E14A95A)
+(module tm4c:Earth (layer F.Cu) (tedit 5E14A95A)
   (fp_text reference REF** (at 0 -1.278 unlocked) (layer Dwgs.User) hide
-    (effects (font (size 1 1) (thickness 0.15)))
+    (effects (font (size 0.75 0.75) (thickness 0.15)))
   )
   (fp_text value Earth (at 0 -2.278) (layer F.Fab)
     (effects (font (size 1 1) (thickness 0.15)))
