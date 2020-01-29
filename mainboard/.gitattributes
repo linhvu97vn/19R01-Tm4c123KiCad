@@ -1,2 +1,5 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+# Example of a `.gitattributes` file which reclassifies `.rb` files as KiCad:
+*.rb linguist-language=KiCad
+
+# Replace any whitespace in the language name with hyphens:
+*.glyphs linguist-language=OpenStep-Property-List
