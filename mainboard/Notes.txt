@@ -1,0 +1,23 @@
+v1.3
+Failed
+Power supply pass
+Wrong footprint of Crystal 16.000 Mhz
+Pins distorb when soldering
+-> Just use as less as possible tin soldering
+-> How to use solder wick:
+Solder wick used for removing waste tin that sticks in pin of chip
+First step: Apply grease to the component pins that wasted tin
+Second: Put solder wick parallel with pin row
+Third: Use the torch tip presses the solder wicked and waits until it is hot enough.
+Finally: Remove the tip while continue to press the solder wicked with vertical force.
+----------------------------------------------------------
+v1.4
+Fixe the footprint of Crystal 16.000 Mhz 
+	+ Change to handsolder
+	+ Change the order of pins
+Change switchs to outside
+Optimize JTAG pin
+Remove the vias that conflict with texts in silk layer
+Add transistors with leds
+Change all LEDs to RGB
+----------------------------------------------------------
